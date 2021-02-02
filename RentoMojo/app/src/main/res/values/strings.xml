@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RentoMojo</string>
+
+    <string name="trending_search">Trending Searches</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="newly_launched">Newly Launched</string>
+
 </resources>
