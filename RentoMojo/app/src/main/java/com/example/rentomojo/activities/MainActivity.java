@@ -1,8 +1,10 @@
-package com.example.rentomojo;
+package com.example.rentomojo.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.rentomojo.R;
 
 public class MainActivity extends AppCompatActivity {
 
