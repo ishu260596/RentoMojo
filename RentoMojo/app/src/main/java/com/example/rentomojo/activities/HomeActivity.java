@@ -19,7 +19,6 @@ import com.example.rentomojo.fragments.UserFragment;
 
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView mTabLatoutHA;
     private ImageButton mIbtnHome;
     private ImageButton mIbtnSearch;
     private ImageButton mIbtnCategory;
@@ -43,7 +42,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initViews() {
-        mTabLatoutHA = findViewById(R.id.tabLayoutHA);
         mIbtnHome = findViewById(R.id.iBtnHome);
         mIbtnUser = findViewById(R.id.iBtnUser);
         mIbtnCart = findViewById(R.id.iBtnCart);
