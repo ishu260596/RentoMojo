@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewSelectCity"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/dp_10"
@@ -9,6 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="@dimen/dp_90"
+        android:id="@+id/constraintLayoutSelectCITY"
         android:layout_height="100dp"
         android:paddingTop="@dimen/dp_10">
 
@@ -16,6 +18,7 @@
             android:id="@+id/ivCity"
             android:layout_width="@dimen/dp_50"
             android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_5"
             android:src="@drawable/bangalore_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
