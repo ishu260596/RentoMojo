@@ -5,6 +5,7 @@
     <string name="most_popular">Most Popular</string>
     <string name="newly_launched">Newly Launched</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="select_city">Select City</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
