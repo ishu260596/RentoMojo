@@ -59,6 +59,7 @@ public class HomeFragment extends Fragment {
         mTvSearchCity = view.findViewById(R.id.tvSearchCity);
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

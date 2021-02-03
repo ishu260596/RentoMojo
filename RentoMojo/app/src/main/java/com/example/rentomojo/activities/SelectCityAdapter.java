@@ -14,16 +14,18 @@ import java.util.List;
 public class SelectCityAdapter extends RecyclerView.Adapter<SelectCityViewHolder> {
 
     private List<ModelClass> modelClassList;
+    private ItemClickListener itemClickListener;
 
-    public SelectCityAdapter(List<ModelClass> modelClassList){
+    public SelectCityAdapter(List<ModelClass> modelClassList,ItemClickListener itemClickListener){
         this.modelClassList=modelClassList;
+        this.itemClickListener=itemClickListener;
     }
 
     @NonNull
     @Override
     public SelectCityViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout_select_city,parent,false);
-        return new SelectCityViewHolder(view);
+        return new SelectCityViewHolder(view,itemClickListener);
     }
 
     @Override

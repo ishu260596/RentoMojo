@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.rentomojo.R;
@@ -11,10 +12,11 @@ import com.example.rentomojo.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SelectCityActivity extends AppCompatActivity {
+public class SelectCityActivity extends AppCompatActivity implements ItemClickListener{
 
     private RecyclerView recyclerView;
     private List<ModelClass> modelClassList;
+    private SelectCityAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,25 +28,42 @@ public class SelectCityActivity extends AppCompatActivity {
     }
     private void buildData() {
         modelClassList = new ArrayList<>();
-        modelClassList.add(new ModelClass(R.drawable.bangalore_image,"Bangalore"));
-        modelClassList.add(new ModelClass(R.drawable.mumbai_image,"Mumbai"));
-        modelClassList.add(new ModelClass(R.drawable.pune_image,"Pune"));
-        modelClassList.add(new ModelClass(R.drawable.delhi_image,"Delhi"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Noida"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Gurgaon"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Hydrabad"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Chennai"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Ahmedabad"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Mysore"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Jaipur"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Faridabad"));
-        modelClassList.add(new ModelClass(R.drawable.noida_image,"Ghaziabad"));
+        modelClassList.add(new ModelClass(R.drawable.bangalore_image,"Bangalore",false));
+        modelClassList.add(new ModelClass(R.drawable.mumbai_image,"Mumbai",false));
+        modelClassList.add(new ModelClass(R.drawable.pune_image,"Pune",false));
+        modelClassList.add(new ModelClass(R.drawable.delhi_image,"Delhi",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Noida",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Gurgaon",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Hydrabad",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Chennai",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Ahmedabad",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Mysore",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Jaipur",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Faridabad",false));
+        modelClassList.add(new ModelClass(R.drawable.noida_image,"Ghaziabad",false));
     }
 
     private void setAdapter() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
         recyclerView.setLayoutManager(gridLayoutManager);
-        SelectCityAdapter adapter = new SelectCityAdapter(modelClassList);
+        adapter = new SelectCityAdapter(modelClassList,this);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onItemClicked(ModelClass modelClass,int position) {
+        ModelClass updateModel;
+        if(modelClass.isSelected()){
+            updateModel=new ModelClass(modelClass.getCityImage(),modelClass.getCityName(),false);
+        }
+        else {
+            updateModel = new ModelClass(modelClass.getCityImage(),modelClass.getCityName(),true);
+        }
+        modelClassList.set(position,updateModel);
+        adapter.notifyDataSetChanged();
+
+        Intent intent = new Intent(SelectCityActivity.this,HomeActivity.class);
+        intent.putExtra("data",modelClass.getCityName());
+        startActivity(intent);
     }
 }
