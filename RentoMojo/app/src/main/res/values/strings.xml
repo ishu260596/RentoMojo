@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">RentoMojo</string>
+    <string name="trending_search">Trending Searches</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="newly_launched">Newly Launched</string>
+
+
+    <string name="select_city">Select City</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="furniture">Furniture</string>
+    <string name="packages">Packages</string>
+    <string name="appliances">Appliances</string>
+    <string name="offers">Offers</string>
+    <string name="banglore">Banglore</string>
+    <string name="fitness">Fitness</string>
+    <string name="wfh">WFH \n Essentials</string>
+    <string name="safety_precautions_during">Safety precautions during\nCOVID-19</string>
+    <string name="we_re">"We're" taking additional steps and\nprecautionary measures to protect our\ncommunity from COVID-19"</string>
+    <string name="know_more">Know More</string>
+    <string name="refer_to_your">"Refer to your friend  earn\nupto ₹1000 more"</string>
+    <string name="refer_to_your_friend_earn"><![CDATA[Refer to your friend & earn\nupto ₹1000 more]]></string>
+    <string name="earn_25_when_your_friend">Earn ₹25 when your friend signs\nup on RentoMojo
+        and upto200\nwhen your friend places an order\nsuccessfully</string>
+    <string name="refer">Refer now</string>
+    <string name="upto_70_off">Upto 70% off</string>
+    <string name="electronics">Electronics</string>
+    <string name="products_you_might_like_to_rent">Products you might like to rent</string>
 </resources>

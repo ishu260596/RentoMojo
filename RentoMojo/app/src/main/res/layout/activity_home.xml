@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tabLayoutHA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tabLayoutHA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flContainer" />
+
+    <ImageButton
+        android:id="@+id/iBtnHome"
+        android:layout_width="@dimen/dp_0"
+        android:focusable="true"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toStartOf="@id/iBtnSearch"
+        app:layout_constraintStart_toStartOf="@id/tabLayoutHA"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
+        app:srcCompat="@drawable/ic_home_final" />
+
+    <ImageButton
+        android:id="@+id/iBtnSearch"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toStartOf="@id/iBtnCategory"
+        app:layout_constraintStart_toEndOf="@id/iBtnHome"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
+        app:srcCompat="@drawable/ic_lsearch_final" />
+
+    <ImageButton
+        android:id="@+id/iBtnCategory"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toStartOf="@id/iBtnCart"
+        app:layout_constraintStart_toEndOf="@id/iBtnSearch"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
+        app:srcCompat="@drawable/ic_category_final" />
+
+    <ImageButton
+        android:id="@+id/iBtnCart"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toStartOf="@id/iBtnUser"
+        app:layout_constraintStart_toEndOf="@id/iBtnCategory"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
+        app:srcCompat="@drawable/ic_cart_final__2_"/>
+
+    <ImageButton
+        android:id="@+id/iBtnUser"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toEndOf="@id/tabLayoutHA"
+        app:layout_constraintStart_toEndOf="@id/iBtnCart"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
+        app:srcCompat="@drawable/ic_user_final" />
+</androidx.constraintlayout.widget.ConstraintLayout>
