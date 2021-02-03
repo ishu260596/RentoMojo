@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -15,6 +16,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.recyclerview.NewOfferAdapterVieHolderClass;
+
+import java.util.ArrayList;
 
 
 public class HomeFragment extends Fragment {
@@ -41,6 +45,24 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
+        setFirstRecyclerView();
+        setSecondRecyclerView();
+    }
+
+    private void setFirstRecyclerView() {
+        ArrayList<Integer> imageList = new ArrayList<>();
+        imageList.add(R.drawable.discount_one_image);
+        imageList.add(R.drawable.discount_two_image);
+        imageList.add(R.drawable.discount_one_image);
+        imageList.add(R.drawable.discount_two_image);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        NewOfferAdapterVieHolderClass adapterVieHolderClass = new NewOfferAdapterVieHolderClass(imageList);
+        mRecyclerViewFirst.setLayoutManager(linearLayoutManager);
+        mRecyclerViewFirst.setAdapter(adapterVieHolderClass);
+    }
+
+    private void setSecondRecyclerView() {
+
     }
 
     private void initViews(View view) {
