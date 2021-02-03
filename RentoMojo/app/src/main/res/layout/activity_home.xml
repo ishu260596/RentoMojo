@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toStartOf="@id/iBtnSearch"
         app:layout_constraintStart_toStartOf="@id/tabLayoutHA"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
-        app:srcCompat="@drawable/ic_home_1" />
+        app:srcCompat="@drawable/ic_home_final" />
 
     <ImageButton
         android:id="@+id/iBtnSearch"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toStartOf="@id/iBtnCategory"
         app:layout_constraintStart_toEndOf="@id/iBtnHome"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
-        app:srcCompat="@drawable/ic_loupe" />
+        app:srcCompat="@drawable/ic_lsearch_final" />
 
     <ImageButton
         android:id="@+id/iBtnCategory"
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toStartOf="@id/iBtnCart"
         app:layout_constraintStart_toEndOf="@id/iBtnSearch"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
-        app:srcCompat="@drawable/ic_category" />
+        app:srcCompat="@drawable/ic_category_final" />
 
     <ImageButton
         android:id="@+id/iBtnCart"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toStartOf="@id/iBtnUser"
         app:layout_constraintStart_toEndOf="@id/iBtnCategory"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
-        app:srcCompat="@drawable/ic_shopping_cart" />
+        app:srcCompat="@drawable/ic_cart_final__2_"/>
 
     <ImageButton
         android:id="@+id/iBtnUser"
@@ -81,5 +81,5 @@
         app:layout_constraintEnd_toEndOf="@id/tabLayoutHA"
         app:layout_constraintStart_toEndOf="@id/iBtnCart"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
-        app:srcCompat="@drawable/ic_user" />
+        app:srcCompat="@drawable/ic_user_final" />
 </androidx.constraintlayout.widget.ConstraintLayout>
