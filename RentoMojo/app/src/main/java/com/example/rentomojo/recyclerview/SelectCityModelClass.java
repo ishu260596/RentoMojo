@@ -1,12 +1,12 @@
-package com.example.rentomojo.activities;
+package com.example.rentomojo.recyclerview;
 
-public class ModelClass {
+public class SelectCityModelClass {
 
     private int cityImage;
     private String cityName;
     private boolean isSelected;
 
-    public ModelClass(int cityImage, String cityName,boolean isSelected) {
+    public SelectCityModelClass(int cityImage, String cityName) {
         this.cityImage = cityImage;
         this.cityName = cityName;
         this.isSelected=isSelected;

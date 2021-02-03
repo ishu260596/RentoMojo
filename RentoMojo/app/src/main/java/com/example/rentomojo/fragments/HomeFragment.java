@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -15,6 +16,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.recyclerview.ItemHFModelClass;
+import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
+import com.example.rentomojo.recyclerview.NewOfferAdapterVieHolderClass;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class HomeFragment extends Fragment {
@@ -41,6 +48,39 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
+        getData();
+        setFirstRecyclerView();
+        setSecondRecyclerView();
+    }
+
+    private void getData() {
+        if (getArguments() != null) {
+            String cityName = getArguments().getString("cityName");
+            mTvSearchCity.setText(cityName);
+        }
+    }
+
+    private void setFirstRecyclerView() {
+        ArrayList<Integer> imageList = new ArrayList<>();
+        imageList.add(R.drawable.discount_one_image);
+        imageList.add(R.drawable.discount_two_image);
+        imageList.add(R.drawable.discount_one_image);
+        imageList.add(R.drawable.discount_two_image);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        NewOfferAdapterVieHolderClass adapterVieHolderClass = new NewOfferAdapterVieHolderClass(imageList);
+        mRecyclerViewFirst.setLayoutManager(linearLayoutManager);
+        mRecyclerViewFirst.setAdapter(adapterVieHolderClass);
+    }
+
+    private void setSecondRecyclerView() {
+        List<ItemHFModelClass> modelClassList = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            modelClassList.add(new ItemHFModelClass(R.drawable.chairhomefragmnet, "₹1350/mo", "WFH Chair..."));
+        }
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        ItemsInHFViewHolderAdapter ItemsInHFViewHolderAdapter = new ItemsInHFViewHolderAdapter(modelClassList);
+        mRecyclerViewSecond.setLayoutManager(linearLayoutManager);
+        mRecyclerViewSecond.setAdapter(ItemsInHFViewHolderAdapter);
     }
 
     private void initViews(View view) {
