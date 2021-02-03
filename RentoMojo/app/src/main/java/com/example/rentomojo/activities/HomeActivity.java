@@ -6,7 +6,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -24,16 +27,29 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private ImageButton mIbtnCategory;
     private ImageButton mIbtnCart;
     private ImageButton mIbtnUser;
+    private Animation scaleUp;
+    private Animation scaleDown;
     private FragmentManager fragmentManager;
+    private String cityName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initViews();
+        getIntentData();
         HomeFragment homeFragment = new HomeFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("cityName", cityName);
+        homeFragment.setArguments(bundle);
         launchFragment(homeFragment, "HomeFragment");
+    }
 
+    private void getIntentData() {
+        if (getIntent() != null && getIntent().getExtras() != null) {
+            cityName = getIntent().getStringExtra("cityName");
+        }
     }
 
     private void launchFragment(Fragment fragment, String tag) {
@@ -47,6 +63,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mIbtnCart = findViewById(R.id.iBtnCart);
         mIbtnSearch = findViewById(R.id.iBtnSearch);
         mIbtnCategory = findViewById(R.id.iBtnCategory);
+        scaleDown = AnimationUtils.loadAnimation(this, R.anim.scale_down);
+        scaleUp = AnimationUtils.loadAnimation(this, R.anim.scale_up);
         fragmentManager = getSupportFragmentManager();
 
         mIbtnCart.setOnClickListener(this);

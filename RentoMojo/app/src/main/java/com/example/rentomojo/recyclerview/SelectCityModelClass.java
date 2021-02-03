@@ -1,11 +1,11 @@
-package com.example.rentomojo.activities;
+package com.example.rentomojo.recyclerview;
 
-public class ModelClass {
+public class SelectCityModelClass {
 
     private int cityImage;
     private String cityName;
 
-    public ModelClass(int cityImage, String cityName) {
+    public SelectCityModelClass(int cityImage, String cityName) {
         this.cityImage = cityImage;
         this.cityName = cityName;
     }
