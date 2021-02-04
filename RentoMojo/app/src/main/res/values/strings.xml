@@ -9,6 +9,17 @@
     <string name="view_all">View All</string>
 
     <string name="back">Back</string>
+    <string name="choose_by_room_type">Choose By Room Type</string>
+    <string name="chose_by_apartment_type">Choose By Apartment type</string>
+    <string name="bedroom">Bedroom</string>
+    <string name="living_room">Living Room</string>
+   <string name="work_from_home">Work From Home</string>
+    <string name="kitchen_dining">Kitchen and Dining</string>
+    <string name="smart_home">Smart Home</string>
+    <string name="fitness_exercise">Fitness and Exercise</string>
+    <string name="studio_apartment">Studio Apartment</string>
+    <string name="one_bhk">1 BHK</string>
+    <string name="two_bhk">2 BHK</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="furniture">Furniture</string>
@@ -41,11 +52,19 @@
     <string name="bengalore">bengalore</string>
 
 
-    <string name="offers_promotions">offers_promotions</string>
+    <string name="offers_promotions1">offers_promotions</string>
     <string name="iglogin">igLogin</string>
     <string name="contact_us">contact_us</string>
     <string name="read_more">read_more</string>
     <string name="login_singup">login_singup</string>
 
     <string name="iglocation">iglocation</string>
+    <string name="skip"><![CDATA[Skip >]]></string>
+    <string name="skip_new1">Skip</string>
+    <string name="trending_search_xyt1">Trending Search</string>
+    <string name="most_popular_second">Most Popular</string>
+    <string name="offers_promotions"><![CDATA[Offers & Promotions]]></string>
+    <string name="explore">Explore</string>
+    <string name="wfh10">WFH10</string>
+    <string name="get_10_off_every_month_on_a_minimum">"Get 10% OFF every month on a minimum\nmonthly rental of Rs. 300 (maximum discount\nod Rs.200 per month)"</string>
 </resources>

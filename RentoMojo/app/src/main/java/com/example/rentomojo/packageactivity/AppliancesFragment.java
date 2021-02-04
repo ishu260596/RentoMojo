@@ -12,6 +12,11 @@ import com.example.rentomojo.R;
 
 public class AppliancesFragment extends Fragment {
 
+    public static AppliancesFragment newInstance(){
+      AppliancesFragment appliancesFragment = new AppliancesFragment();
+        return appliancesFragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
