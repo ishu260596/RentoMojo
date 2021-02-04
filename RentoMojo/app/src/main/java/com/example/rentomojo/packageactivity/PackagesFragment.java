@@ -12,6 +12,14 @@ import com.example.rentomojo.R;
 
 public class PackagesFragment extends Fragment {
 
+    private static final String TAG = PackagesFragment.class.getSimpleName();
+    public static final String ARG_PARAM1 = "param1";
+
+    public static PackagesFragment newInstance(){
+        PackagesFragment packagesFragment = new PackagesFragment();
+        return packagesFragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
