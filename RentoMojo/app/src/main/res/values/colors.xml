@@ -11,4 +11,7 @@
     <color name="refer">#DC3A3A</color>
     <color name="Red">#FF0000</color>
     <color name="Silver">#708090</color>
+    <color name="LightGreen">#20B2AA</color>
+    <color name="LoginColor">#20b2aa</color>
+
 </resources>
