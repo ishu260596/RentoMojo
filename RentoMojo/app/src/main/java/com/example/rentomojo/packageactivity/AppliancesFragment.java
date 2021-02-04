@@ -17,6 +17,9 @@ public class AppliancesFragment extends Fragment {
         return appliancesFragment;
     }
 
+    public AppliancesFragment() {
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

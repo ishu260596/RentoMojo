@@ -15,6 +15,9 @@ public class PackagesFragment extends Fragment {
     private static final String TAG = PackagesFragment.class.getSimpleName();
     public static final String ARG_PARAM1 = "param1";
 
+    public PackagesFragment() {
+    }
+
     public static PackagesFragment newInstance(){
         PackagesFragment packagesFragment = new PackagesFragment();
         return packagesFragment;

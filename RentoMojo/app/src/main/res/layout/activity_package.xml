@@ -3,24 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".packageactivity.PackageActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/back"
-        android:drawableStart="@drawable/arrow_back"
-        android:textSize="@dimen/sp_17"
+        android:layout_marginTop="@dimen/dp_10"
+        android:drawableStart="@drawable/ic_baseline_arrow_back_24"
         android:drawablePadding="@dimen/dp_20"
-        />
+        android:gravity="clip_vertical"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:text="@string/back"
+        android:textSize="@dimen/sp_22" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:tabGravity="fill"
         app:tabIndicatorColor="@color/Red"
+        app:tabMode="scrollable"
         app:tabTextColor="@color/black" />
 
     <androidx.viewpager.widget.ViewPager

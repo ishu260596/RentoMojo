@@ -17,6 +17,9 @@ public class FitnessFragment extends Fragment {
         return fitnessFragment;
     }
 
+    public FitnessFragment() {
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
