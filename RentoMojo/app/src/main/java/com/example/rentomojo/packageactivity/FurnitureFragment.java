@@ -13,6 +13,10 @@ import com.example.rentomojo.R;
 
 public class FurnitureFragment extends Fragment {
 
+    public static FurnitureFragment newInstance(){
+        FurnitureFragment furnitureFragment = new FurnitureFragment();
+        return furnitureFragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

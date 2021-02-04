@@ -9,6 +9,17 @@
     <string name="view_all">View All</string>
 
     <string name="back">Back</string>
+    <string name="choose_by_room_type">Choose By Room Type</string>
+    <string name="chose_by_apartment_type">Choose By Apartment type</string>
+    <string name="bedroom">Bedroom</string>
+    <string name="living_room">Living Room</string>
+   <string name="work_from_home">Work From Home</string>
+    <string name="kitchen_dining">Kitchen and Dining</string>
+    <string name="smart_home">Smart Home</string>
+    <string name="fitness_exercise">Fitness and Exercise</string>
+    <string name="studio_apartment">Studio Apartment</string>
+    <string name="one_bhk">1 BHK</string>
+    <string name="two_bhk">2 BHK</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="furniture">Furniture</string>

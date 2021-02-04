@@ -13,6 +13,10 @@ import com.example.rentomojo.R;
 
 public class ElectronicsFragment extends Fragment {
 
+    public static ElectronicsFragment newInstance(){
+        ElectronicsFragment electronicsFragment = new ElectronicsFragment();
+        return electronicsFragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
