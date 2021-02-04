@@ -4,10 +4,12 @@ public class SelectCityModelClass {
 
     private int cityImage;
     private String cityName;
+    private boolean isSelected;
 
     public SelectCityModelClass(int cityImage, String cityName) {
         this.cityImage = cityImage;
         this.cityName = cityName;
+        this.isSelected=isSelected;
     }
 
     public int getCityImage() {
@@ -16,5 +18,9 @@ public class SelectCityModelClass {
 
     public String getCityName() {
         return cityName;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
     }
 }

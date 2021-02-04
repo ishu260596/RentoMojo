@@ -141,6 +141,7 @@ public class HomeFragment extends Fragment {
         mImageSlider = view.findViewById(R.id.image_slider);
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
