@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.rentomojo.R;
 import com.example.rentomojo.activities.LoginAcitvity;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import org.w3c.dom.Text;
 
@@ -75,8 +76,12 @@ public class UserFragment extends Fragment implements View.OnClickListener {
         Intent intent;
         switch (v.getId()) {
             case R.id.cv1:
-                intent = new Intent(getActivity(), LoginAcitvity.class);
-                startActivity(intent);
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity(), R.style.BottomSheetDialogTheme);
+                View view = LayoutInflater.from(getContext()).inflate(R.layout.bottom_sheet_layout,
+                        v.findViewById(R.id.llBottomConatainer));
+                bottomSheetDialog.setContentView(view);
+                bottomSheetDialog.setCanceledOnTouchOutside(true);
+                bottomSheetDialog.show();
                 break;
         }
 
