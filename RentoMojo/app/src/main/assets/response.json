@@ -1,0 +1,195 @@
+{
+  "Explore Products": [
+    {
+      "Bedroom": [
+        {
+          "name": "Aurora Queen Bed",
+          "price": 599,
+          "offer": "available",
+          "image": "https://i.pinimg.com/736x/f4/23/4c/f4234cfa7620d9de9487cd4ebac3b715.jpg"
+        },
+        {
+          "name": "Kipper Single Bed",
+          "price": 999,
+          "offer": "available",
+          "image": "https://mediacdn.99acres.com/media1/13638/12/272772392M-1610433304863.jpg"
+        },
+        {
+          "name": "Poise Queen Bed",
+          "price": 550,
+          "offer": "available",
+          "image": "https://5.imimg.com/data5/SP/TU/JT/SELLER-2414758/premium-jaipuri-razai-double-bed--500x500.jpg"
+        },
+        {
+          "name": "Aurora Single Bed",
+          "price": 599,
+          "offer": "available",
+          "image": "https://mediacdn.99acres.com/media1/13638/12/272772392M-1610433304863.jpg"
+        },
+        {
+          "name": "Poise Single Bed",
+          "price": 999,
+          "offer": "available",
+          "image": "https://is1-2.housingcdn.com/01c16c28/4361b2d455403b5638e52e3f638444a1/v0/fs/3_bhk_independent_house-for-sale-lamhi-Varanasi-bedroom.jpg"
+        },
+        {
+          "name": "Single XL Bed",
+          "price": 550,
+          "offer": "available",
+          "image": "https://5.imimg.com/data5/DL/BA/GS/SELLER-2414758/premium-jaipuri-razai-double-bed--500x500.jpg"
+        }
+      ]
+    },
+    {
+      "Living Room": [
+        {
+          "name": "Felix Sofa",
+          "no of seats": 2,
+          "basic": "2 items",
+          "value": "3 items",
+          "prime": "4 items",
+          "image": "https://st.hzcdn.com/simgs/pictures/living-rooms/real-estate-avenue-23-media-img~b4e1b00e0095a970_4-2279-1-193d0bd.jpg"
+        },
+        {
+          "name": "Latte Cofee Table",
+          "no of seats": 2,
+          "basic": "2 items",
+          "value": "3 items",
+          "prime": "4 items",
+          "image": "https://banner2.cleanpng.com/20180601/pht/kisspng-table-living-room-couch-parlour-fauteuil-5b11f08c60cd57.6842090515279023483965.jpg"
+        },
+        {
+          "name": "Olivar 3-Seater Sofa",
+          "no of seats": 3,
+          "basic": "2 items",
+          "value": "3 items",
+          "prime": "4 items",
+          "image": "https://comps.canstockphoto.com/front-view-of-modern-interior-with-tv-stock-photograph_csp56186891.jpg"
+        }
+      ]
+    },
+    {
+      "Appliances": [
+        {
+          "name": "Washing Machine",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items",
+          "image": "https://m.media-amazon.com/images/S/aplus-media/vc/ef238e29-aabd-4da7-9f58-fcb5558d2b2d.__CR1116,844,1298,1298_PT0_SX300_V1___.jpg"
+        },
+        {
+          "name": "Refrigerator",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items",
+          "image": "https://pasalnepal.com/assets/images/products/1whirlpool-wtm-552-r-ss-double-door-fridge-450l.jpg"
+        },
+        {
+          "name": "Television",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items",
+          "image": "https://images-na.ssl-images-amazon.com/images/I/91-hWcNu2yL._SL1500_.jpg"
+        },
+        {
+          "name": "Microwaves",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items",
+          "image": "https://m.media-amazon.com/images/I/81oDVWH0OoL._AC_UL320_.jpg"
+        },
+        {
+          "name": "Air Conditioners",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items",
+          "image": "https://m.media-amazon.com/images/I/61cIPnWFxbL._AC_SS350_.jpg"
+        },
+        {
+          "name": "Air Coolers",
+          "warranty": "2 years",
+          "units": "1 unit",
+          "price": "4 items",
+          "image": "https://m.media-amazon.com/images/I/61cIPnWFxbL._AC_SS350_.jpg"
+        }
+      ]
+    },
+    {
+      "Electronics": [
+        {
+          "name": "Smartphones",
+          "price": "50 items",
+          "image": "https://st1.bgr.in/wp-content/uploads/2019/01/alcatel-1x-2019.jpg"
+        },
+        {
+          "name": "Laptops",
+          "price": "10 items",
+          "image": "https://cdn.slashgear.com/wp-content/uploads/2021/01/02_Scar_17_insert.jpg"
+        },
+        {
+          "name": "Tablets",
+          "price": "14 items",
+          "image": "https://images-na.ssl-images-amazon.com/images/I/41z9gMzjKnL._SX425_.jpg"
+        },
+        {
+          "name": "Smart Devices",
+          "price": "7 items",
+          "image": "https://images-na.ssl-images-amazon.com/images/I/41qS6PFLPXL.jpg"
+        },
+        {
+          "name": "Camera",
+          "price": "23 items",
+          "image": "https://cameradecision.com/img/px300_300/front_straight/Samsung_WB1100F_1.jpg"
+        },
+        {
+          "name": "Electronics Equipment",
+          "price": "111 items",
+          "image": "https://5.imimg.com/data5/CL/AW/FU/SELLER-439114/m-1100-1120-500x500.png"
+        }
+      ]
+    },
+    {
+      "Fitness": [
+        {
+          "name": "Treadmills",
+          "price": "4 items",
+          "image": "https://5.imimg.com/data5/YL/KM/MY-6674373/motorised-treadmill-222-500x500.png"
+        },
+        {
+          "name": "Cross Trainers",
+          "price": "4 items",
+          "image": "https://topratedhomestuff.co.uk/wp-content/uploads/2020/10/Xterra-Free-Style-5.8e-Elliptical-Cross-Trainer-1-1-2.jpg"
+        },
+        {
+          "name": "Exercise Bikes",
+          "price": "4 items",
+          "image": "https://images-na.ssl-images-amazon.com/images/I/61L7X-a-ATL._SL1332_.jpg"
+        },
+        {
+          "name": "Massagers",
+          "price": "4 items",
+          "image": "https://m.media-amazon.com/images/I/611OneyLwqL._AC_UL320_ML3_.jpg"
+        }
+      ]
+    },
+    {
+      "Work From Home": [
+        {
+          "name": "WFH Premium",
+          "price": "Rs 200",
+          "image": "https://images.livemint.com/img/2020/04/10/600x338/working-from-home-ktOD--621x414@LiveMint_1586503752905.jpg"
+        },
+        {
+          "name": "WFH Room",
+          "price": "Rs 150",
+          "image": "https://images.idgesg.net/images/article/2020/03/4957179841_a13891d91b_o-1-100835303-large.jpg"
+        },
+        {
+          "name": "WFH Corner",
+          "price": "Rs 280",
+          "image": "https://img.odishatv.in/wp-content/uploads/2020/12/Work-from-Home-Space-750x430.jpg"
+        }
+      ]
+    }
+  ]
+}

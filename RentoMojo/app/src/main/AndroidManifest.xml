@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentoMojo">
-        <activity android:name=".activities.GetStartedActivity"/>
+        <activity android:name=".packageactivity.PackageActivity"></activity>
+        <activity android:name=".activities.GetStartedActivity" />
         <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.SelectCityActivity" />
-        <activity android:name=".activities.HomeActivity">
-        </activity>
+        <activity android:name=".activities.HomeActivity"></activity>
         <activity android:name=".activities.BeginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

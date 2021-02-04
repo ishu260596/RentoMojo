@@ -8,6 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/dp_20"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -21,7 +22,7 @@
                 android:id="@+id/tvAppliances"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_10"
                 android:text="@string/appliances"
                 android:textColor="@color/black"
@@ -52,7 +53,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tvAppliances" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/Constraint_Layout_2"
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                 android:id="@+id/tvFurniture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_10"
                 android:text="@string/furniture"
                 android:textColor="@color/black"
@@ -94,7 +94,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tvFurniture" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/Constraint_Layout_3"
             android:layout_width="match_parent"
@@ -105,7 +104,7 @@
                 android:id="@+id/tvElectronics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_10"
                 android:text="@string/electronics"
                 android:textColor="@color/black"
@@ -136,7 +135,6 @@
                 app:layout_constraintTop_toBottomOf="@id/tvElectronics" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/Constraint_Layout_4"
             android:layout_width="match_parent"
@@ -147,7 +145,7 @@
                 android:id="@+id/tvPackages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_10"
                 android:text="@string/packages"
                 android:textColor="@color/black"
@@ -178,6 +176,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvPackages" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </LinearLayout>
 
