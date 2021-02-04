@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewSF"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_15"
+    android:layout_marginBottom="@dimen/dp_15"
+    android:elevation="@dimen/dp_10"
+    android:padding="@dimen/dp_5"
+    app:cardCornerRadius="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/tvTrendingItemSF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="asdjvkj"
+        android:paddingEnd="@dimen/dp_15"
+        android:drawableStart="@drawable/ic_lightning_arrow_1"
+        android:drawablePadding="@dimen/dp_15"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10" />
+</androidx.cardview.widget.CardView>

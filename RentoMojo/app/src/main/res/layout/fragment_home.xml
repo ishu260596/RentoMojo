@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -37,11 +38,30 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:elevation="@dimen/dp_10">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewFirstHF"
-            style="@style/recyclerViewInHomeFragmentOuter"
-            android:layout_marginTop="@dimen/dp_25" />
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_140"
+                android:layout_margin="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_30"
+                app:iss_auto_cycle="true"
+                app:iss_delay="0"
+                app:iss_period="1200" />
+
+        </androidx.cardview.widget.CardView>
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerViewFirstHF"-->
+<!--            style="@style/recyclerViewInHomeFragmentOuter"-->
+<!--            android:layout_marginTop="@dimen/dp_25" />-->
 
         <LinearLayout
             style="@style/linearLayoutInHomeFragments"
@@ -179,8 +199,7 @@
 
         <androidx.cardview.widget.CardView
             style="@style/cardViewInHomeFragmentsOuter"
-            android:layout_marginTop="@dimen/dp_25"
-           >
+            android:layout_marginTop="@dimen/dp_25">
 
             <RelativeLayout
                 style="@style/relativeLayoutInHomeFragmentOuter"
