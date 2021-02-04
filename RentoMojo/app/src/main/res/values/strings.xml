@@ -26,4 +26,22 @@
     <string name="upto_70_off">Upto 70% off</string>
     <string name="electronics">Electronics</string>
     <string name="products_you_might_like_to_rent">Products you might like to rent</string>
+    <string name="hello_guest">Hello Guest</string>
+    <string name="bengalore">Bengalore</string>
+    <string name="iglocation">TODO</string>
+    <string name="iguserlogo">TODO</string>
+    <string name="igLogin">TODO</string>
+    <string name="login_singup">Login/Singup</string>
+    <string name="offers_promotions"><![CDATA[Offers&Promotions]]></string>
+    <string name="contact_us">Contact Us</string>
+    <string name="read_more">Read More</string>
+    <string name="already_have_an_account">already_have_an_account</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="forgot_password">forgot_password</string>
+    <string name="login">login</string>
+    <string name="or">or</string>
+    <string name="new_user_register_now">new_user_register_now</string>
+    <string name="skip_login">skip_login</string>
+
 </resources>
