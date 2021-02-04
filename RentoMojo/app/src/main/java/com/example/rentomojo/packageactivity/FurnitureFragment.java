@@ -18,6 +18,9 @@ public class FurnitureFragment extends Fragment {
         return furnitureFragment;
     }
 
+    public FurnitureFragment() {
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
