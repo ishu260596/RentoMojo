@@ -1,5 +1,6 @@
 package com.example.rentomojo.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.MostItemPopularAdapter;
 import com.example.rentomojo.recyclerview.TrendingItemSFViewHolder;
@@ -23,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class SearchFragment extends Fragment {
+public class SearchFragment extends Fragment implements View.OnClickListener {
     private CardView mCardViewPackages;
     private CardView mCardViewFurniture;
     private CardView mCardViewAppliances;
@@ -155,6 +157,7 @@ public class SearchFragment extends Fragment {
         mRecyclerViewSecond = view.findViewById(R.id.recyclerViewSecondSF);
         mRecyclerViewThird = view.findViewById(R.id.recyclerViewThirdSF);
         mEtSearch = view.findViewById(R.id.etSearchSF);
+        mCardViewPackages.setOnClickListener(this);
     }
 
     @Override
@@ -162,5 +165,15 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_search, container, false);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.clPackagesSF:
+                Intent intent = new Intent(getActivity(), PackageActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

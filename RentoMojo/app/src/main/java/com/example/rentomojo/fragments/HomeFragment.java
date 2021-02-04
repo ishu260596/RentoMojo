@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -163,10 +164,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tvOffers:
-                Intent intent2 = new Intent(getActivity(), PackageActivity.class);
-                startActivity(intent2);
-//                Intent intent = new Intent(getContext(), OfferPromotionsActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(getContext(), OfferPromotionsActivity.class);
+                startActivity(intent);
                 break;
             case R.id.tvSearchCity:
                 Intent intent1 = new Intent(getActivity(), SelectCityActivity.class);
@@ -175,14 +174,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.tvSafetyKnowMore:
                 break;
             case R.id.btnReferNow:
-                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity());
-                bottomSheetDialog.setContentView(R.layout.bottom_sheet_layout);
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity(), R.style.BottomSheetDialogTheme);
+                View view = LayoutInflater.from(getContext()).inflate(R.layout.bottom_sheet_layout,
+                        v.findViewById(R.id.llBottomConatainer));
+                bottomSheetDialog.setContentView(view);
                 bottomSheetDialog.setCanceledOnTouchOutside(true);
                 bottomSheetDialog.show();
                 break;
             case R.id.clPackagesHF:
-//                Intent intent2 = new Intent(getActivity(), PackageActivity.class);
-//                startActivity(intent2);
+                Intent intent2 = new Intent(getActivity(), PackageActivity.class);
+                startActivity(intent2);
         }
     }
 
