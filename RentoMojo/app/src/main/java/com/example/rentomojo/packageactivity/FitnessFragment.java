@@ -12,6 +12,11 @@ import com.example.rentomojo.R;
 
 public class FitnessFragment extends Fragment {
 
+    public static FitnessFragment newInstance(){
+        FitnessFragment fitnessFragment = new FitnessFragment();
+        return fitnessFragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
