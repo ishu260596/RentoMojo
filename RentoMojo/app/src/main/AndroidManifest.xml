@@ -13,18 +13,21 @@
 
         </activity>
         <activity android:name=".packageactivity.PackageActivity" />
-        <activity android:name=".activities.GetStartedActivity" >
+        <activity android:name=".activities.GetStartedActivity">
 
         </activity>
-        <activity android:name=".activities.WelcomeActivity" />
+        <activity android:name=".activities.WelcomeActivity">
+
+        </activity>
         <activity android:name=".activities.SelectCityActivity" />
-        <activity android:name=".activities.LoginAcitvity"/>
+        <activity android:name=".activities.LoginAcitvity" />
         <activity android:name=".activities.HomeActivity">
         </activity>
         <activity android:name=".activities.BeginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
         </activity>
 
