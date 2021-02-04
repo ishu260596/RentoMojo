@@ -46,12 +46,12 @@
             android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
             android:gravity="center_vertical"
             android:paddingBottom="@dimen/dp_10"
             android:text="Rs 249"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_13"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/tv2"
             app:layout_constraintTop_toBottomOf="@id/tv2" />
 

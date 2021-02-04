@@ -41,8 +41,6 @@ public class SelectCityViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 constraintLayout.setBackgroundColor(R.color.black);
-
-
                 listner.onClick(selectCityModelClass.getCityName());
             }
         });
