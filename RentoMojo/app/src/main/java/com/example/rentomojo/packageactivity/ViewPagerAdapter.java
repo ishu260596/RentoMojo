@@ -16,12 +16,17 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-            case 0: PackagesFragment.newInstance();
-            case 1: FurnitureFragment.newInstance();
-            case 2: AppliancesFragment.newInstance();
-            case 3: ElectronicsFragment.newInstance();
-            case 4: FitnessFragment.newInstance();
+        switch (position) {
+            case 0:
+                return PackagesFragment.newInstance();
+            case 1:
+                return FurnitureFragment.newInstance();
+            case 2:
+                return AppliancesFragment.newInstance();
+            case 3:
+                return ElectronicsFragment.newInstance();
+            case 4:
+                return FitnessFragment.newInstance();
         }
         return null;
     }
@@ -36,16 +41,21 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         String tabName = "";
 
-        switch (position){
-            case 0: tabName = "Packages";
-             break;
-            case 1:  tabName = "Furniture";
+        switch (position) {
+            case 0:
+                tabName = "Packages";
                 break;
-            case 2: tabName = "Appliances";
+            case 1:
+                tabName = "Furniture";
                 break;
-            case 3: tabName = "Electronics";
+            case 2:
+                tabName = "Appliances";
                 break;
-            case 4: tabName = "Fitness";
+            case 3:
+                tabName = "Electronics";
+                break;
+            case 4:
+                tabName = "Fitness";
                 break;
         }
         return tabName;

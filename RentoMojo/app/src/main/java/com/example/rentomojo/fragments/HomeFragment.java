@@ -21,8 +21,9 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
-//import com.example.rentomojo.activities.OfferPromotionsActivity;
+import com.example.rentomojo.activities.OfferPromotionsActivity;
 import com.example.rentomojo.activities.SelectCityActivity;
+import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
 import com.example.rentomojo.recyclerview.NewOfferAdapterVieHolderClass;
@@ -147,6 +148,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         mTvSearchCity.setOnClickListener(this);
         mTvKnowMore.setOnClickListener(this);
         mBtnReferNow.setOnClickListener(this);
+        mCardViewPackages.setOnClickListener(this);
     }
 
 
@@ -161,8 +163,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tvOffers:
-                Intent intent = new Intent(getContext(), OfferPromotionsActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(getActivity(), PackageActivity.class);
+                startActivity(intent2);
+//                Intent intent = new Intent(getContext(), OfferPromotionsActivity.class);
+//                startActivity(intent);
                 break;
             case R.id.tvSearchCity:
                 Intent intent1 = new Intent(getActivity(), SelectCityActivity.class);
@@ -176,6 +180,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 bottomSheetDialog.setCanceledOnTouchOutside(true);
                 bottomSheetDialog.show();
                 break;
+            case R.id.clPackagesHF:
+//                Intent intent2 = new Intent(getActivity(), PackageActivity.class);
+//                startActivity(intent2);
         }
     }
 

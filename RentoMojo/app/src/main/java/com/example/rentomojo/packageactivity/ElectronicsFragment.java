@@ -18,6 +18,9 @@ public class ElectronicsFragment extends Fragment {
         return electronicsFragment;
     }
 
+    public ElectronicsFragment() {
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
