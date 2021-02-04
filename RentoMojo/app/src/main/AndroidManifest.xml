@@ -13,12 +13,13 @@
         <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.SelectCityActivity" />
         <activity android:name=".activities.HomeActivity">
-        </activity>
-        <activity android:name=".activities.BeginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activities.BeginActivity">
+
         </activity>
 
         <meta-data

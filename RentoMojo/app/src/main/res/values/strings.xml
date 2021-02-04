@@ -28,4 +28,6 @@
     <string name="products_you_might_like_to_rent">Products you might like to rent</string>
     <string name="skip"><![CDATA[Skip >]]></string>
     <string name="skip_new">Skip</string>
+    <string name="trending_search_xyt">Trending Search</string>
+    <string name="most_popular_second">Most Popular</string>
 </resources>

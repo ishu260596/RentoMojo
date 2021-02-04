@@ -13,6 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.rentomojo.R;
 import com.example.rentomojo.fragments.CartFragment;
 import com.example.rentomojo.fragments.CategoryFragment;
@@ -27,8 +28,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private ImageButton mIbtnCategory;
     private ImageButton mIbtnCart;
     private ImageButton mIbtnUser;
-    private Animation scaleUp;
-    private Animation scaleDown;
+    private LottieAnimationView mLottieCart;
+    private LottieAnimationView mLottieSearch;
+    private LottieAnimationView mLottieCategory;
+    private LottieAnimationView mLottieHome;
+    private LottieAnimationView mLottieUser;
     private FragmentManager fragmentManager;
     private String cityName;
 
@@ -63,8 +67,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mIbtnCart = findViewById(R.id.iBtnCart);
         mIbtnSearch = findViewById(R.id.iBtnSearch);
         mIbtnCategory = findViewById(R.id.iBtnCategory);
-        scaleDown = AnimationUtils.loadAnimation(this, R.anim.scale_down);
-        scaleUp = AnimationUtils.loadAnimation(this, R.anim.scale_up);
+        mLottieCart = findViewById(R.id.lottieCart);
+        mLottieHome = findViewById(R.id.lottieHome);
+        mLottieSearch = findViewById(R.id.lottieSearch);
+        mLottieUser = findViewById(R.id.lottieUser);
+        mLottieCategory = findViewById(R.id.lottieCategory);
         fragmentManager = getSupportFragmentManager();
 
         mIbtnCart.setOnClickListener(this);
@@ -79,22 +86,96 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.iBtnHome:
                 HomeFragment homeFragment = new HomeFragment();
+
+                mLottieHome.setVisibility(View.VISIBLE);
+                mIbtnHome.setVisibility(View.INVISIBLE);
+                mLottieHome.playAnimation();
+
+                mIbtnCategory.setVisibility(View.VISIBLE);
+                mIbtnCart.setVisibility(View.VISIBLE);
+                mIbtnSearch.setVisibility(View.VISIBLE);
+                mIbtnUser.setVisibility(View.VISIBLE);
+
+                mLottieSearch.setVisibility(View.INVISIBLE);
+                mLottieCart.setVisibility(View.INVISIBLE);
+                mLottieUser.setVisibility(View.INVISIBLE);
+                mLottieCategory.setVisibility(View.INVISIBLE);
+
                 launchFragment(homeFragment, "HomeFragment");
                 break;
             case R.id.iBtnSearch:
                 SearchFragment searchFragment = new SearchFragment();
+
+                mLottieSearch.setVisibility(View.VISIBLE);
+                mIbtnSearch.setVisibility(View.INVISIBLE);
+                mLottieSearch.playAnimation();
+
+                mIbtnCategory.setVisibility(View.VISIBLE);
+                mIbtnCart.setVisibility(View.VISIBLE);
+                mIbtnHome.setVisibility(View.VISIBLE);
+                mIbtnUser.setVisibility(View.VISIBLE);
+
+                mLottieHome.setVisibility(View.INVISIBLE);
+                mLottieCart.setVisibility(View.INVISIBLE);
+                mLottieUser.setVisibility(View.INVISIBLE);
+                mLottieCategory.setVisibility(View.INVISIBLE);
+
+
                 launchFragment(searchFragment, "SearchFragment");
                 break;
             case R.id.iBtnCart:
                 CartFragment cartFragment = new CartFragment();
+
+                mLottieCart.setVisibility(View.VISIBLE);
+                mIbtnCart.setVisibility(View.INVISIBLE);
+                mLottieCart.playAnimation();
+
+                mIbtnCategory.setVisibility(View.VISIBLE);
+                mIbtnUser.setVisibility(View.VISIBLE);
+                mIbtnSearch.setVisibility(View.VISIBLE);
+                mIbtnHome.setVisibility(View.VISIBLE);
+
+                mLottieSearch.setVisibility(View.INVISIBLE);
+                mLottieHome.setVisibility(View.INVISIBLE);
+                mLottieUser.setVisibility(View.INVISIBLE);
+                mLottieCategory.setVisibility(View.INVISIBLE);
+
                 launchFragment(cartFragment, "CartFragment");
                 break;
             case R.id.iBtnCategory:
                 CategoryFragment categoryFragment = new CategoryFragment();
+                mIbtnCategory.setVisibility(View.INVISIBLE);
+                mLottieCategory.setVisibility(View.VISIBLE);
+                mLottieCategory.playAnimation();
+
+                mIbtnCart.setVisibility(View.VISIBLE);
+                mIbtnUser.setVisibility(View.VISIBLE);
+                mIbtnSearch.setVisibility(View.VISIBLE);
+                mIbtnHome.setVisibility(View.VISIBLE);
+
+                mLottieSearch.setVisibility(View.INVISIBLE);
+                mLottieHome.setVisibility(View.INVISIBLE);
+                mLottieUser.setVisibility(View.INVISIBLE);
+                mLottieCart.setVisibility(View.INVISIBLE);
+
                 launchFragment(categoryFragment, "CategoryFragment");
                 break;
             case R.id.iBtnUser:
                 UserFragment userFragment = new UserFragment();
+                mIbtnUser.setVisibility(View.INVISIBLE);
+                mLottieUser.setVisibility(View.VISIBLE);
+                mLottieUser.playAnimation();
+
+                mIbtnCategory.setVisibility(View.VISIBLE);
+                mIbtnCart.setVisibility(View.VISIBLE);
+                mIbtnSearch.setVisibility(View.VISIBLE);
+                mIbtnHome.setVisibility(View.VISIBLE);
+
+                mLottieSearch.setVisibility(View.INVISIBLE);
+                mLottieHome.setVisibility(View.INVISIBLE);
+                mLottieCart.setVisibility(View.INVISIBLE);
+                mLottieCategory.setVisibility(View.INVISIBLE);
+
                 launchFragment(userFragment, "UserFragment");
                 break;
         }
