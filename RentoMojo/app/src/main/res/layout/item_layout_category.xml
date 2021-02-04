@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvConstraintLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/cvConstraintLayout"
-    android:layout_marginTop="@dimen/dp_5"
     android:layout_marginStart="@dimen/dp_10"
-   >
+    android:layout_marginTop="@dimen/dp_5">
 
-        <ImageView
-            android:id="@+id/ivImageItemHF"
-            android:layout_width="@dimen/dp_130"
-            android:layout_height="@dimen/dp_80"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="@id/cvConstraintLayout"
-            app:layout_constraintStart_toStartOf="@id/cvConstraintLayout"
-            app:layout_constraintTop_toTopOf="@id/cvConstraintLayout" />
+    <ImageView
+        android:id="@+id/ivImageItemHF"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_80"
+        android:layout_margin="@dimen/dp_2"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@id/cvConstraintLayout"
+        app:layout_constraintStart_toStartOf="@id/cvConstraintLayout"
+        app:layout_constraintTop_toTopOf="@id/cvConstraintLayout" />
 
-        <TextView
-            android:id="@+id/tvItemName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_10"
-            android:text="Magnum Chest of ..."
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp_14"
-            app:layout_constraintStart_toStartOf="@id/ivImageItemHF"
-            app:layout_constraintTop_toBottomOf="@id/ivImageItemHF" />
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="Magnum Chest of ..."
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="@id/ivImageItemHF"
+        app:layout_constraintTop_toBottomOf="@id/ivImageItemHF" />
 
-        <TextView
-            android:id="@+id/tvPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:paddingBottom="@dimen/dp_10"
-            android:text="Rs 249"
-            android:textSize="@dimen/sp_11"
-            app:layout_constraintStart_toStartOf="@id/tvItemName"
-            app:layout_constraintTop_toBottomOf="@id/tvItemName" />
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/dp_10"
+        android:text="Rs 249"
+        android:textSize="@dimen/sp_11"
+        app:layout_constraintStart_toStartOf="@id/tvItemName"
+        app:layout_constraintTop_toBottomOf="@id/tvItemName" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.rentomojo.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,18 +21,21 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
+import com.example.rentomojo.activities.OfferPromotionsActivity;
+import com.example.rentomojo.activities.SelectCityActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
 import com.example.rentomojo.recyclerview.NewOfferAdapterVieHolderClass;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     private TextView mTvSearchCity;
     private TextView mTvOffers;
-    private TextView mKnowMore;
+    private TextView mTvKnowMore;
     private ImageSlider mImageSlider;
     private CardView mCardViewPackages;
     private CardView mCardViewFurniture;
@@ -133,12 +137,16 @@ public class HomeFragment extends Fragment {
         mCardviewWFHEssentials = view.findViewById(R.id.clWfhEssentialsHF);
         mCardViewPackages = view.findViewById(R.id.clPackagesHF);
         mCardViewUpto = view.findViewById(R.id.clUptoOffHF);
-        mKnowMore = view.findViewById(R.id.tvSafetyKnowMore);
+        mTvKnowMore = view.findViewById(R.id.tvSafetyKnowMore);
 //        mRecyclerViewFirst = view.findViewById(R.id.recyclerViewFirstHF);
         mRecyclerViewSecond = view.findViewById(R.id.recyclerViewSecondHF);
         mTvOffers = view.findViewById(R.id.tvOffers);
         mTvSearchCity = view.findViewById(R.id.tvSearchCity);
         mImageSlider = view.findViewById(R.id.image_slider);
+        mTvOffers.setOnClickListener(this);
+        mTvSearchCity.setOnClickListener(this);
+        mTvKnowMore.setOnClickListener(this);
+        mBtnReferNow.setOnClickListener(this);
     }
 
 
@@ -148,4 +156,27 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tvOffers:
+                Intent intent = new Intent(getContext(), OfferPromotionsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tvSearchCity:
+                Intent intent1 = new Intent(getActivity(), SelectCityActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.tvSafetyKnowMore:
+                break;
+            case R.id.btnReferNow:
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity());
+                bottomSheetDialog.setContentView(R.layout.bottom_sheet_layout);
+                bottomSheetDialog.setCanceledOnTouchOutside(true);
+                bottomSheetDialog.show();
+                break;
+        }
+    }
+
 }
