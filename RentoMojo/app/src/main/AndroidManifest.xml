@@ -22,10 +22,12 @@
         <activity android:name=".activities.SelectCityActivity" />
         <activity android:name=".activities.LoginAcitvity" />
         <activity android:name=".activities.HomeActivity">
+        </activity>
+        <activity android:name=".activities.BeginActivity">
             <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-                <action android:name="android.intent.action.MAIN" />
-                />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
         </activity>
 
