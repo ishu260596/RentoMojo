@@ -4,8 +4,11 @@
     <string name="most_popular">Most Popular</string>
     <string name="newly_launched">Newly Launched</string>
 
-
     <string name="select_city">Select City</string>
+
+    <string name="view_all">View All</string>
+
+    <string name="back">Back</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="furniture">Furniture</string>
@@ -26,22 +29,23 @@
     <string name="upto_70_off">Upto 70% off</string>
     <string name="electronics">Electronics</string>
     <string name="products_you_might_like_to_rent">Products you might like to rent</string>
-    <string name="hello_guest">Hello Guest</string>
-    <string name="bengalore">Bengalore</string>
-    <string name="iglocation">TODO</string>
-    <string name="iguserlogo">TODO</string>
-    <string name="igLogin">TODO</string>
-    <string name="login_singup">Login/Singup</string>
-    <string name="offers_promotions"><![CDATA[Offers&Promotions]]></string>
-    <string name="contact_us">Contact Us</string>
-    <string name="read_more">Read More</string>
-    <string name="already_have_an_account">already_have_an_account</string>
-    <string name="email">email</string>
-    <string name="password">password</string>
-    <string name="forgot_password">forgot_password</string>
     <string name="login">login</string>
+    <string name="forgot_password">forgot_password</string>
     <string name="or">or</string>
-    <string name="new_user_register_now">new_user_register_now</string>
-    <string name="skip_login">skip_login</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="skip_new">skip ></string>
+    <string name="trending_search_xyt">trending_search_xyt</string>
+    <string name="iguserlogo">iguserlogo</string>
+    <string name="hello_guest">Hello_Guest</string>
+    <string name="bengalore">bengalore</string>
 
+
+    <string name="offers_promotions">offers_promotions</string>
+    <string name="iglogin">igLogin</string>
+    <string name="contact_us">contact_us</string>
+    <string name="read_more">read_more</string>
+    <string name="login_singup">login_singup</string>
+
+    <string name="iglocation">iglocation</string>
 </resources>

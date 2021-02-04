@@ -28,7 +28,6 @@ public class LoginAcitvity extends AppCompatActivity {
                 if(isValidate()){
                     startActivity(new Intent(getApplicationContext(),HomeActivity.class));
                     LoginAcitvity.this.finish();
-
                 }
             }
         });

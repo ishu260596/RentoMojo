@@ -14,7 +14,7 @@ import com.example.rentomojo.R;
 
 public class BeginActivity extends AppCompatActivity {
 
-    private final int LOGO_TIME = 3000;
+    private final int LOGO_TIME = 2000;
     private ImageView mIvRentMojoLogo;
     private Animation Center;
 

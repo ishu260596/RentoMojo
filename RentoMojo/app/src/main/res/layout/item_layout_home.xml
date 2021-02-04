@@ -1,57 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp"
-    android:elevation="@dimen/dp_10"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_margin="@dimen/dp_5"
+    android:elevation="@dimen/dp_10">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:padding="@dimen/dp_8"
         android:id="@+id/cvConstraintLayout"
-        android:layout_height="wrap_content">
-
-    <ImageView
-        android:id="@+id/ivImage"
-        app:layout_constraintStart_toStartOf="@id/cvConstraintLayout"
-        app:layout_constraintTop_toTopOf="@id/cvConstraintLayout"
-        app:layout_constraintEnd_toEndOf="@id/cvConstraintLayout"
-        android:layout_width="130dp"
-        android:layout_height="60dp"/>
-
-    <TextView
-        android:id="@+id/tv1"
         android:layout_width="wrap_content"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="@dimen/sp_14"
-        android:layout_marginTop="@dimen/dp_10"
-        app:layout_constraintStart_toStartOf="@id/ivImage"
-        app:layout_constraintTop_toBottomOf="@id/ivImage"
-        android:text="Magnum Chest of ..."
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8">
 
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@id/tv1"
-        app:layout_constraintTop_toBottomOf="@id/tv1"
-        android:layout_width="wrap_content"
-        android:hint="Rent"
-        android:textSize="@dimen/sp_12"
-        android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/ivImageItemHF"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_90"
+            app:layout_constraintEnd_toEndOf="@id/cvConstraintLayout"
+            app:layout_constraintStart_toStartOf="@id/cvConstraintLayout"
+            app:layout_constraintTop_toTopOf="@id/cvConstraintLayout" />
 
-    <TextView
-        android:id="@+id/tv3"
-        android:text="Rs 249"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="@dimen/sp_13"
-        app:layout_constraintStart_toStartOf="@id/tv2"
-        app:layout_constraintTop_toBottomOf="@id/tv2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="Magnum Chest of ..."
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/ivImageItemHF"
+            app:layout_constraintTop_toBottomOf="@id/ivImageItemHF" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Rent"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toStartOf="@id/tvItemName"
+            app:layout_constraintTop_toBottomOf="@id/tvItemName" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="Rs 249"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintStart_toStartOf="@id/tv2"
+            app:layout_constraintTop_toBottomOf="@id/tv2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

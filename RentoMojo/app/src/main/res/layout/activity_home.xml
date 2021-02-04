@@ -30,19 +30,38 @@
     <ImageButton
         android:id="@+id/iBtnHome"
         android:layout_width="@dimen/dp_0"
-        android:focusable="true"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_0"
         android:background="@color/white"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
         app:layout_constraintEnd_toStartOf="@id/iBtnSearch"
         app:layout_constraintStart_toStartOf="@id/tabLayoutHA"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
         app:srcCompat="@drawable/ic_home_final" />
 
+    <LinearLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toStartOf="@id/iBtnSearch"
+        app:layout_constraintStart_toStartOf="@id/tabLayoutHA"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieHome"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:background="@color/white"
+            android:visibility="invisible"
+            app:lottie_rawRes="@raw/homefullufinal" />
+    </LinearLayout>
+
+
     <ImageButton
         android:id="@+id/iBtnSearch"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_0"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
         app:layout_constraintEnd_toStartOf="@id/iBtnCategory"
@@ -50,36 +69,106 @@
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
         app:srcCompat="@drawable/ic_lsearch_final" />
 
+    <LinearLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toStartOf="@id/iBtnCategory"
+        app:layout_constraintStart_toEndOf="@id/iBtnHome"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieSearch"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:visibility="invisible"
+            app:lottie_rawRes="@raw/search" />
+    </LinearLayout>
+
+
     <ImageButton
         android:id="@+id/iBtnCategory"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_0"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
         app:layout_constraintEnd_toStartOf="@id/iBtnCart"
         app:layout_constraintStart_toEndOf="@id/iBtnSearch"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
         app:srcCompat="@drawable/ic_category_final" />
+    <LinearLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toStartOf="@id/iBtnCart"
+        app:layout_constraintStart_toEndOf="@id/iBtnSearch"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieCategory"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:visibility="invisible"
+            app:lottie_rawRes="@raw/category" />
+    </LinearLayout>
+
 
     <ImageButton
         android:id="@+id/iBtnCart"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_0"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
         app:layout_constraintEnd_toStartOf="@id/iBtnUser"
         app:layout_constraintStart_toEndOf="@id/iBtnCategory"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
-        app:srcCompat="@drawable/ic_cart_final__2_"/>
+        app:srcCompat="@drawable/ic_cart_final__2_" />
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toStartOf="@id/iBtnUser"
+        app:layout_constraintStart_toEndOf="@id/iBtnCategory"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieCart"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:visibility="invisible"
+            app:lottie_rawRes="@raw/cartagianfinal" />
+    </LinearLayout>
+
 
     <ImageButton
         android:id="@+id/iBtnUser"
         android:layout_width="@dimen/dp_0"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_0"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
         app:layout_constraintEnd_toEndOf="@id/tabLayoutHA"
         app:layout_constraintStart_toEndOf="@id/iBtnCart"
         app:layout_constraintTop_toTopOf="@+id/tabLayoutHA"
         app:srcCompat="@drawable/ic_user_final" />
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayoutHA"
+        app:layout_constraintEnd_toEndOf="@id/tabLayoutHA"
+        app:layout_constraintStart_toEndOf="@id/iBtnCart"
+        app:layout_constraintTop_toTopOf="@+id/tabLayoutHA">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieUser"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:visibility="invisible"
+            app:lottie_rawRes="@raw/userfullandfinal" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
