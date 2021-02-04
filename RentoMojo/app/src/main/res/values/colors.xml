@@ -13,5 +13,6 @@
     <color name="Silver">#708090</color>
     <color name="LightGreen">#20B2AA</color>
     <color name="LoginColor">#20b2aa</color>
+    <color name="grey">#B5ADAD</color>
 
 </resources>
