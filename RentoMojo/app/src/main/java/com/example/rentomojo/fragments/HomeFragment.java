@@ -31,6 +31,7 @@ import com.example.rentomojo.R;
 import com.example.rentomojo.activities.OfferPromotionsActivity;
 import com.example.rentomojo.activities.SelectCityActivity;
 import com.example.rentomojo.activities.WebViewActivity;
+import com.example.rentomojo.offer_upto_70.OfferActivity;
 import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
@@ -158,6 +159,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         mTvKnowMore.setOnClickListener(this);
         mBtnReferNow.setOnClickListener(this);
         mCardViewPackages.setOnClickListener(this);
+        mCardViewUpto.setOnClickListener(this);
     }
 
 
@@ -225,6 +227,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 Intent intent4 = new Intent(getActivity(), PackageActivity.class);
                 startActivity(intent4);
                 break;
+            case R.id.clUptoOffHF:
+                Intent intent5 = new Intent(getActivity(), OfferActivity.class);
+                startActivity(intent5);
+                break;
+
         }
     }
 }

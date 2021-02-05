@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.offer_upto_70.OfferActivity;
 import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.MostItemPopularAdapter;
@@ -158,6 +159,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         mRecyclerViewThird = view.findViewById(R.id.recyclerViewThirdSF);
         mEtSearch = view.findViewById(R.id.etSearchSF);
         mCardViewPackages.setOnClickListener(this);
+        mCardViewUpto.setOnClickListener(this);
     }
 
     @Override
@@ -174,6 +176,10 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
                 Intent intent = new Intent(getActivity(), PackageActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.clUptoOffSF:
+                Intent intent1 = new Intent(getActivity(), OfferActivity.class);
+                startActivity(intent1);
+
         }
     }
 }
