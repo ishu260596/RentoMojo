@@ -9,15 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentoMojo">
-        <activity android:name=".activities.ReadMoreActivity"></activity>
-        <activity android:name=".activities.OffersAndPromotionsActivity" />
-        <activity android:name=".packageactivity.PackageActivity" />
-        <activity android:name=".activities.GetStartedActivity" />
-        <activity android:name=".activities.WelcomeActivity" />
+        <activity android:name=".activities.WelcomeActivity"></activity>
+        <activity android:name=".activities.BeginActivity" />
+        <activity android:name=".activities.GetStartedActivity"></activity>
         <activity android:name=".activities.SelectCityActivity" />
+        <activity android:name=".activities.OffersAndPromotionsActivity"/>
+        <activity android:name=".offer_upto_70.OfferActivity" />
+        <activity android:name=".activities.ReadMoreActivity" />
+        <activity android:name=".packageactivity.PackageActivity" />
         <activity android:name=".activities.LoginAcitvity" />
-        <activity android:name=".activities.HomeActivity" />
-        <activity android:name=".activities.BeginActivity">
+        <activity android:name=".activities.WebViewActivity"/>
+        <activity android:name=".activities.HomeActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
 
@@ -25,7 +27,6 @@
                 />
             </intent-filter>
         </activity>
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

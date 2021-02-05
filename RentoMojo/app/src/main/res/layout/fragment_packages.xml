@@ -122,7 +122,7 @@
 
                     <ImageView
                         style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/ic_washing_machine_final" />
+                        android:src="@drawable/ic_washing_machine_finalblackwhite" />
 
                     <TextView
                         android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
 
                     <ImageView
                         style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/ic_bed_final" />
+                        android:src="@drawable/ic_iconfinder_twi_blackwhite" />
 
                     <TextView
                         android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
 
                     <ImageView
                         style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/smart_value" />
+                        android:src="@drawable/ic_alexa_blackwhite" />
 
                     <TextView
                         android:layout_height="wrap_content"
@@ -246,7 +246,7 @@
 
                     <ImageView
                         style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/fitness" />
+                        android:src="@drawable/ic_trademill_final_blackwhite" />
 
                     <TextView
                         android:layout_height="wrap_content"
