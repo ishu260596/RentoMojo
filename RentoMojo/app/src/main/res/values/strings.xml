@@ -21,6 +21,7 @@
     <string name="one_bhk">1 BHK</string>
     <string name="two_bhk">2 BHK</string>
     <string name="browse_by_room_type">Browse by Room type</string>
+    <string name="browse_by_product_type">Browse by Product type</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="furniture">Furniture</string>
