@@ -210,23 +210,24 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tvViewAppliancesCatF:
-                redirectToPackages();
+                redirectToPackages(2);
                 break;
             case R.id.tvViewFurnitureCatF:
-                redirectToPackages();
+                redirectToPackages(1);
                 break;
             case R.id.tvViewPackagesCatF:
-                redirectToPackages();
+                redirectToPackages(0);
                 break;
             case R.id.tvElectronicCatF:
-                redirectToPackages();
+                redirectToPackages(3);
                 break;
 
         }
     }
 
-    private void redirectToPackages() {
+    private void redirectToPackages(int position) {
         Intent intent = new Intent(getActivity(), PackageActivity.class);
+        intent.putExtra("position",position);
         startActivity(intent);
     }
 }

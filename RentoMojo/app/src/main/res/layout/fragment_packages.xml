@@ -20,10 +20,11 @@
             android:elevation="@dimen/dp_10">
 
             <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/imageSlider"
+                android:id="@+id/imageSlider1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_150"
                 app:iss_auto_cycle="true"
+                android:layout_margin="@dimen/dp_5"
                 app:iss_delay="0"
                 app:iss_period="1200" />
 
