@@ -19,7 +19,7 @@
             android:drawableStart="@drawable/arrow_back"
             android:drawablePadding="@dimen/dp_20"
             android:padding="@dimen/dp_10"
-            android:text="@string/products"
+            android:text="@string/product"
             android:textSize="@dimen/sp_20" />
     </androidx.cardview.widget.CardView>
 
