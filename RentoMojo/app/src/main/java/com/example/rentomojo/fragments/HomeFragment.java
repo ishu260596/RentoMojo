@@ -20,8 +20,10 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
+import com.example.rentomojo.activities.HomeActivity;
 import com.example.rentomojo.activities.OffersAndPromotionsActivity;
 import com.example.rentomojo.activities.SelectCityActivity;
+import com.example.rentomojo.packageactivity.FurnitureFragment;
 import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
@@ -147,6 +149,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         mTvKnowMore.setOnClickListener(this);
         mBtnReferNow.setOnClickListener(this);
         mCardViewPackages.setOnClickListener(this);
+        mCardViewFurniture.setOnClickListener(this);
+        mCardViewAppliances.setOnClickListener(this);
+        mCardViewElectronics.setOnClickListener(this);
+        mCardViewFitness.setOnClickListener(this);
     }
 
 
@@ -181,6 +187,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.clPackagesHF:
                 Intent intent2 = new Intent(getActivity(), PackageActivity.class);
                 startActivity(intent2);
+                break;
+
         }
     }
 
