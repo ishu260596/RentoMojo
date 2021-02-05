@@ -1,4 +1,4 @@
-package com.example.rentomojo.packageactivity;
+package com.example.rentomojo.explore_packages;
 
 import android.view.LayoutInflater;
 import android.view.View;

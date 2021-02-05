@@ -1,10 +1,12 @@
 package com.example.rentomojo.get_lists;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.explore_packages.ExplorePackageModel;
 import com.example.rentomojo.packageactivity.PackageItem;
 import com.example.rentomojo.recyclerview.CategoryItem;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.SelectCityModelClass;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -418,4 +420,176 @@ public class GetLists {
         }
         return packageItemList_1;
     }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList1() {
+        List<ExplorePackageModel> explorePackageModelList_1 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 5 == 0) {
+                explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.almera, "Almirah", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 5 == 1) {
+                explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.bed, "Magnum Queen Master", "Rs 1000/mo", "3 Items"));
+            }
+            if (i % 5 == 2) {
+                explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "2 Items"));
+            }
+            if (i % 5 == 3) {
+                explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.bedthree, "Napstar Single Bed", "Rs 570/mo", "8 Items"));
+            }
+            if (i % 5 == 4) {
+                explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.shelf, "Shue Self", "Rs 331/mo", "2 Items"));
+            }
+
+        }
+        return explorePackageModelList_1;
+    }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList2() {
+        List<ExplorePackageModel> explorePackageModelList_2 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 5 == 0) {
+                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.study_table, "Study Table", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 5 == 1) {
+                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.book_shelf, "Book Shelf", "Rs 700/mo", "3 Items"));
+            }
+            if (i % 5 == 2) {
+                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.package_study_table, "Study Table", "Rs 700/mo", "3 Items"));
+            }
+            if (i % 5 == 3) {
+                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.almirah, "Living Room Basics", "Rs 700/mo", "3 Items"));
+            }
+            if (i % 5 == 4) {
+                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.almerafour, "Almirah", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_2;
+    }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList3() {
+        List<ExplorePackageModel> explorePackageModelList_3 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 5 == 0) {
+                explorePackageModelList_3.add(new ExplorePackageModel(R.drawable.refrigerator, "Refrigerator", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 5 == 1) {
+                explorePackageModelList_3.add(new ExplorePackageModel(R.drawable.washingmachine, "Washing Machine", "Rs 700/mo", "3 Items"));
+            }
+            if (i % 5 == 2) {
+                explorePackageModelList_3.add(new ExplorePackageModel(R.drawable.air_cooler, "Air Coolers", "Rs 700/mo", "3 Items"));
+            }
+            if (i % 5 == 3) {
+                explorePackageModelList_3.add(new ExplorePackageModel(R.drawable.microwave, "Microwave", "Rs 700/mo", "3 Items"));
+            }
+            if (i % 5 == 4) {
+                explorePackageModelList_3.add(new ExplorePackageModel(R.drawable.singledoor_refrigerator, "Refrigerator", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_3;
+    }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList4() {
+        List<ExplorePackageModel> explorePackageModelList_4 = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            if (i % 3 == 0) {
+                explorePackageModelList_4.add(new ExplorePackageModel(R.drawable.package_study_table, "Study Table", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 3 == 1) {
+                explorePackageModelList_4.add(new ExplorePackageModel(R.drawable.chair, "Chair", "Rs 400/mo", "9 Items"));
+            }
+            if (i % 3 == 2) {
+                explorePackageModelList_4.add(new ExplorePackageModel(R.drawable.book_shelf, "BOOK Shelf", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_4;
+    }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList5() {
+        List<ExplorePackageModel> explorePackageModelList_5 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 2 == 0) {
+                explorePackageModelList_5.add(new ExplorePackageModel(R.drawable.kitchen_appliances, "Kitchen Appliance", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 2 == 1) {
+                explorePackageModelList_5.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_5;
+    }
+
+
+    public static List<ExplorePackageModel> getExplorePackageModelList6() {
+        List<ExplorePackageModel> explorePackageModelList_6 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 2 == 0) {
+                explorePackageModelList_6.add(new ExplorePackageModel(R.drawable.television, "Television", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 2 == 1) {
+                explorePackageModelList_6.add(new ExplorePackageModel(R.drawable.tablet, "Tablet", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_6;
+    }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList7() {
+        List<ExplorePackageModel> explorePackageModelList_7 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 2 == 0) {
+                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.treadmills, "Treadmills", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 2 == 1) {
+                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.cross_trainer, "Cross Trainer", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_7;
+    }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList8() {
+        List<ExplorePackageModel> explorePackageModelList_8 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 2 == 0) {
+                explorePackageModelList_8.add(new ExplorePackageModel(R.drawable.almera, "Almira", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 2 == 1) {
+                explorePackageModelList_8.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_8;
+    }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList9() {
+        List<ExplorePackageModel> explorePackageModelList_9 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 2 == 0) {
+                explorePackageModelList_9.add(new ExplorePackageModel(R.drawable.almera, "Almirah", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 2 == 1) {
+                explorePackageModelList_9.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_9;
+    }
+
+    public static List<ExplorePackageModel> getExplorePackageModelList10() {
+        List<ExplorePackageModel> explorePackageModelList_10 = new ArrayList<>();
+        for (int i = 0; i < 200; i++) {
+            if (i % 2 == 0) {
+                explorePackageModelList_10.add(new ExplorePackageModel(R.drawable.almera, "Almirah", "Rs 1208/mo", "5 Items"));
+            }
+            if (i % 2 == 1) {
+                explorePackageModelList_10.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "3 Items"));
+            }
+
+        }
+        return explorePackageModelList_10;
+    }
+
 }

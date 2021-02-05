@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".packageactivity.BedroomFragment">
+    tools:context=".explore_packages.BedroomFragment">
 
     <TextView
         android:id="@+id/tvChooseYourStyle"

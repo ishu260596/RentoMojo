@@ -1,4 +1,4 @@
-package com.example.rentomojo.packageactivity;
+package com.example.rentomojo.explore_packages;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,23 +13,23 @@ import com.example.rentomojo.R;
 
 import java.util.List;
 
-public class TwoBhkAdapter extends RecyclerView.Adapter<TwoBhkAdapter.ItemViewHolder>{
+public class StudioApartmentAdapter extends RecyclerView.Adapter<StudioApartmentAdapter.ItemViewHolder>{
 
     List<ExplorePackageModel> explorePackageModelList;
 
-    public TwoBhkAdapter(List<ExplorePackageModel> explorePackageModelList) {
+    public StudioApartmentAdapter(List<ExplorePackageModel> explorePackageModelList) {
         this.explorePackageModelList=explorePackageModelList;
     }
 
     @NonNull
     @Override
-    public TwoBhkAdapter.ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public StudioApartmentAdapter.ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.explore_package_item_layout, parent, false);
-        return new TwoBhkAdapter.ItemViewHolder(view);
+        return new StudioApartmentAdapter.ItemViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TwoBhkAdapter.ItemViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull StudioApartmentAdapter.ItemViewHolder holder, int position) {
         ExplorePackageModel explorePackageModel = explorePackageModelList.get(position);
         holder.setData(explorePackageModel);
     }

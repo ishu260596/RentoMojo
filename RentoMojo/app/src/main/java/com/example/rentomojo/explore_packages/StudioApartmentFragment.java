@@ -1,4 +1,4 @@
-package com.example.rentomojo.packageactivity;
+package com.example.rentomojo.explore_packages;
 
 import android.os.Bundle;
 
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,25 +32,15 @@ public class StudioApartmentFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerView_8);
+        recyclerView = view.findViewById(R.id.recyclerView_8);
+        buildRecyclerViewData_8();
     }
 
     private void buildRecyclerViewData_8() {
-        List<ExplorePackageModel> explorePackageModelList_8 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 2 == 0) {
-                explorePackageModelList_8.add(new ExplorePackageModel(R.drawable.almera,"Almirah","Rs 1208/mo","5 Items"));
-            }
-            if (i % 2 == 1) {
-                explorePackageModelList_8.add(new ExplorePackageModel(R.drawable.sofa,"Sofa","Rs 700/mo","3 Items"));
-            }
-
-        }
-
+        List<ExplorePackageModel> explorePackageModelList_8 = GetLists.getExplorePackageModelList8();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         StudioApartmentAdapter adapterOne = new StudioApartmentAdapter(explorePackageModelList_8);
         recyclerView.setAdapter(adapterOne);
-
     }
 }

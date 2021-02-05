@@ -1,4 +1,4 @@
-package com.example.rentomojo.packageactivity;
+package com.example.rentomojo.explore_packages;
 
 import android.os.Bundle;
 
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,31 +32,12 @@ public class LivingRoomFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerView_2);
+        recyclerView = view.findViewById(R.id.recyclerView_2);
         buildRecyclerViewData_2();
     }
 
     private void buildRecyclerViewData_2() {
-        List<ExplorePackageModel> explorePackageModelList_2 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 5 == 0) {
-                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.study_table,"Study Table","Rs 1208/mo","5 Items"));
-            }
-            if (i % 5 == 1) {
-                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.book_shelf,"Book Shelf","Rs 700/mo","3 Items"));
-            }
-            if (i % 5 == 2) {
-                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.package_study_table,"Study Table","Rs 700/mo","3 Items"));
-            }
-            if (i % 5 == 3) {
-                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.almirah,"Living Room Basics","Rs 700/mo","3 Items"));
-            }
-            if (i % 5 == 4) {
-                explorePackageModelList_2.add(new ExplorePackageModel(R.drawable.almerafour,"Almirah","Rs 700/mo","3 Items"));
-            }
-
-        }
-
+        List<ExplorePackageModel> explorePackageModelList_2 = GetLists.getExplorePackageModelList2();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         LivingRoomAdapter adapterOne = new LivingRoomAdapter(explorePackageModelList_2);

@@ -1,4 +1,4 @@
-package com.example.rentomojo.packageactivity;
+package com.example.rentomojo.explore_packages;
 
 import android.os.Bundle;
 
@@ -13,11 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TwoBhkFragment extends Fragment {
+public class BedroomFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
@@ -25,30 +26,21 @@ public class TwoBhkFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_two_bhk, container, false);
+        return inflater.inflate(R.layout.fragment_bedroom, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerView_10);
-        buildRecyclerViewData_10();
+        recyclerView=view.findViewById(R.id.recyclerView_1);
+        buildRecyclerViewData_1();
     }
-    private void buildRecyclerViewData_10() {
-        List<ExplorePackageModel> explorePackageModelList_10 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 2 == 0) {
-                explorePackageModelList_10.add(new ExplorePackageModel(R.drawable.almera,"Almirah","Rs 1208/mo","5 Items"));
-            }
-            if (i % 2 == 1) {
-                explorePackageModelList_10.add(new ExplorePackageModel(R.drawable.sofa,"Sofa","Rs 700/mo","3 Items"));
-            }
 
-        }
-
+    private void buildRecyclerViewData_1() {
+        List<ExplorePackageModel> explorePackageModelList_1 = GetLists.getExplorePackageModelList1();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        TwoBhkAdapter adapterOne = new TwoBhkAdapter(explorePackageModelList_10);
+        BedroomAdapter adapterOne = new BedroomAdapter(explorePackageModelList_1);
         recyclerView.setAdapter(adapterOne);
 
     }
