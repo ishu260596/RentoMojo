@@ -85,4 +85,5 @@
     <string name="products">Products</string>
     <string name="cart">Cart</string>
     <string name="proceed"><![CDATA[proceed >]]></string>
+    <string name="total_refundable_deposit">Total Refundable Deposit</string>
 </resources>
