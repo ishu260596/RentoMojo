@@ -183,29 +183,30 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent1);
                 break;
             case R.id.clPackagesSF:
-                goToPackagesActivity();
+                goToPackagesActivity(0);
                 break;
             case R.id.clAppliancesSF:
-                goToPackagesActivity();
+                goToPackagesActivity(2);
                 break;
             case R.id.clElectronicsSF:
-                goToPackagesActivity();
+                goToPackagesActivity(3);
                 break;
             case R.id.clFurnitureSF:
-                goToPackagesActivity();
+                goToPackagesActivity(1);
                 break;
             case R.id.clFitnessSF:
-                goToPackagesActivity();
+                goToPackagesActivity(4);
                 break;
             case R.id.clWfhEssentialsSF:
-                goToPackagesActivity();
+                goToPackagesActivity(3);
                 break;
 
         }
     }
 
-    private void goToPackagesActivity() {
+    private void goToPackagesActivity(int position) {
         Intent intent = new Intent(getActivity(), PackageActivity.class);
+        intent.putExtra("position", position);
         startActivity(intent);
     }
 }

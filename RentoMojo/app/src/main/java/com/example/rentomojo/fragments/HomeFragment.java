@@ -195,22 +195,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent5);
                 break;
             case R.id.clPackagesHF:
-                goToPackagesActivity();
+                goToPackagesActivity(0);
                 break;
             case R.id.clAppliancesHF:
-                goToPackagesActivity();
+                goToPackagesActivity(2);
                 break;
             case R.id.clElectronicsHF:
-                goToPackagesActivity();
+                goToPackagesActivity(3);
                 break;
             case R.id.clFurnitureHF:
-                goToPackagesActivity();
+                goToPackagesActivity(1);
                 break;
             case R.id.clFitnessHF:
-                goToPackagesActivity();
+                goToPackagesActivity(4);
                 break;
             case R.id.clWfhEssentialsHF:
-                goToPackagesActivity();
+                goToPackagesActivity(3);
                 break;
             case R.id.btnReferNow:
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity(), R.style.BottomSheetDialogTheme);
@@ -255,8 +255,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     }
 
-    private void goToPackagesActivity() {
+    private void goToPackagesActivity(int position) {
         Intent intent = new Intent(getActivity(), PackageActivity.class);
+        intent.putExtra("position", position);
         startActivity(intent);
     }
 

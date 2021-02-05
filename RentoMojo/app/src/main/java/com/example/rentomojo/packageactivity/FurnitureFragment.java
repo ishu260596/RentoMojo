@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
 import com.example.rentomojo.recyclerview.CategoryItem;
 
@@ -22,8 +25,9 @@ import java.util.List;
 public class FurnitureFragment extends Fragment {
 
     private RecyclerView recyclerView;
+    private ImageSlider mImageSlider;
 
-    public static FurnitureFragment newInstance(){
+    public static FurnitureFragment newInstance() {
         FurnitureFragment furnitureFragment = new FurnitureFragment();
         return furnitureFragment;
     }
@@ -41,8 +45,18 @@ public class FurnitureFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.recyclerView);
+        mImageSlider = view.findViewById(R.id.imageSlider2);
         buildRecyclerViewData();
+        setSlidingImages();
+    }
+
+    private void setSlidingImages() {
+        List<SlideModel> slideModelList = new ArrayList<>();
+        slideModelList.add(new SlideModel(R.drawable.book_shelf, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.shelf, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.home_decoration, ScaleTypes.FIT));
+        mImageSlider.setImageList(slideModelList, ScaleTypes.FIT);
     }
 
     private void buildRecyclerViewData() {
@@ -51,20 +65,25 @@ public class FurnitureFragment extends Fragment {
         for (int i = 0; i < 200; i++) {
             if (i % 6 == 0) {
                 packageItemList_1.add(new PackageItem(R.drawable.sofa_table, "Sofa & Table", "8 Products"));
-            }if (i % 6 == 1) {
+            }
+            if (i % 6 == 1) {
                 packageItemList_1.add(new PackageItem(R.drawable.home_decoration, "Room Decoration", "3 Products"));
-            }if (i % 6 == 2) {
+            }
+            if (i % 6 == 2) {
                 packageItemList_1.add(new PackageItem(R.drawable.book_shelf, "Book Shelf", "5 Products"));
-            }if (i % 6 == 3) {
+            }
+            if (i % 6 == 3) {
                 packageItemList_1.add(new PackageItem(R.drawable.shelf, "Shoe Shelf", "3 Products"));
-            }if (i % 6 == 4) {
+            }
+            if (i % 6 == 4) {
                 packageItemList_1.add(new PackageItem(R.drawable.study_table, "Study Table Combo", "10 Products"));
-            }if (i % 6 == 5) {
+            }
+            if (i % 6 == 5) {
                 packageItemList_1.add(new PackageItem(R.drawable.bed_package, "Bed Package", "13 Products"));
             }
         }
 
-        GridLayoutManager grid = new GridLayoutManager(getContext(),2);
+        GridLayoutManager grid = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(grid);
         FurnitureAdapter furnitureAdapter = new FurnitureAdapter(packageItemList_1);
         recyclerView.setAdapter(furnitureAdapter);
