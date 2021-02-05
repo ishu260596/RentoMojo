@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/black"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.CartFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:src="@drawable/cart" />
+
+    <Button
+        android:id="@+id/btnCartCatalogue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_35"
+        android:background="@drawable/round_border_edittext"
+        android:backgroundTint="@color/Red"
+        android:text="@string/browse_catalogue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:padding="@dimen/dp_12"
+
+
+        />
+</LinearLayout>
