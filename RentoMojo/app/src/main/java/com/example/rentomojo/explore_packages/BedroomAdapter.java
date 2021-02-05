@@ -16,6 +16,7 @@ import com.example.rentomojo.R;
 import com.example.rentomojo.activities.ShoppingCartActivity;
 
 import java.util.List;
+import java.util.logging.Handler;
 
 public class BedroomAdapter extends RecyclerView.Adapter<BedroomAdapter.ItemViewHolder> {
 
