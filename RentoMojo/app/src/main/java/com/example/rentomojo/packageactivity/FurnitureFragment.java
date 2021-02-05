@@ -16,6 +16,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 import com.example.rentomojo.recyclerview.CategoryItem;
 
 import java.util.ArrayList;
@@ -60,33 +61,10 @@ public class FurnitureFragment extends Fragment {
     }
 
     private void buildRecyclerViewData() {
-
-        List<PackageItem> packageItemList_1 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 6 == 0) {
-                packageItemList_1.add(new PackageItem(R.drawable.sofa_table, "Sofa & Table", "8 Products"));
-            }
-            if (i % 6 == 1) {
-                packageItemList_1.add(new PackageItem(R.drawable.home_decoration, "Room Decoration", "3 Products"));
-            }
-            if (i % 6 == 2) {
-                packageItemList_1.add(new PackageItem(R.drawable.book_shelf, "Book Shelf", "5 Products"));
-            }
-            if (i % 6 == 3) {
-                packageItemList_1.add(new PackageItem(R.drawable.shelf, "Shoe Shelf", "3 Products"));
-            }
-            if (i % 6 == 4) {
-                packageItemList_1.add(new PackageItem(R.drawable.study_table, "Study Table Combo", "10 Products"));
-            }
-            if (i % 6 == 5) {
-                packageItemList_1.add(new PackageItem(R.drawable.bed_package, "Bed Package", "13 Products"));
-            }
-        }
-
+        List<PackageItem> packageItemList_1 = GetLists.getPackageList4();
         GridLayoutManager grid = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(grid);
         FurnitureAdapter furnitureAdapter = new FurnitureAdapter(packageItemList_1);
         recyclerView.setAdapter(furnitureAdapter);
-
     }
 }

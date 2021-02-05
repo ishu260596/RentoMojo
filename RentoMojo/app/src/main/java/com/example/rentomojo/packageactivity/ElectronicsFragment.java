@@ -16,6 +16,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class ElectronicsFragment extends Fragment {
     private RecyclerView recyclerView;
     private ImageSlider mImageSlider;
 
-    public static ElectronicsFragment newInstance(){
+    public static ElectronicsFragment newInstance() {
         ElectronicsFragment electronicsFragment = new ElectronicsFragment();
         return electronicsFragment;
     }
@@ -44,7 +45,7 @@ public class ElectronicsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.recyclerView);
         mImageSlider = view.findViewById(R.id.imageSlider4);
         setSlidingImages();
         buildRecyclerViewData();
@@ -59,25 +60,8 @@ public class ElectronicsFragment extends Fragment {
     }
 
     private void buildRecyclerViewData() {
-
-        List<PackageItem> packageItemList_1 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 6 == 0) {
-                packageItemList_1.add(new PackageItem(R.drawable.mobile, "Smartphones", "10 Products"));
-            }if (i % 6 == 1) {
-                packageItemList_1.add(new PackageItem(R.drawable.bluetooth_speaker, "Smart Devic..", "2 Products"));
-            }if (i % 6 == 2) {
-                packageItemList_1.add(new PackageItem(R.drawable.laptop, "Laptops", "7 Products"));
-            }if (i % 6 == 3) {
-                packageItemList_1.add(new PackageItem(R.drawable.television, "LED TV", "4 Products"));
-            }if (i % 6 == 4) {
-                packageItemList_1.add(new PackageItem(R.drawable.electric_iron, "Electric Ir..", "2 Products"));
-            }if (i % 6 == 5) {
-                packageItemList_1.add(new PackageItem(R.drawable.home_theatre, "Home Thea..", "5 Products"));
-            }
-        }
-
-        GridLayoutManager grid = new GridLayoutManager(getContext(),2);
+        List<PackageItem> packageItemList_1 = GetLists.getPackageList2();
+        GridLayoutManager grid = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(grid);
         FurnitureAdapter furnitureAdapter = new FurnitureAdapter(packageItemList_1);
         recyclerView.setAdapter(furnitureAdapter);

@@ -14,6 +14,7 @@ import android.widget.Button;
 
 import com.example.rentomojo.R;
 import com.example.rentomojo.activities.HomeActivity;
+import com.example.rentomojo.packageactivity.PackageActivity;
 
 
 public class CartFragment extends Fragment {
@@ -40,7 +41,7 @@ public class CartFragment extends Fragment {
         mBtnCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent    = new Intent(getActivity(), HomeActivity.class);
+                Intent intent    = new Intent(getActivity(), PackageActivity.class);
                 startActivity(intent);
             }
         });
