@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
 
 import java.util.ArrayList;
@@ -21,6 +24,7 @@ import java.util.List;
 public class ElectronicsFragment extends Fragment {
 
     private RecyclerView recyclerView;
+    private ImageSlider mImageSlider;
 
     public static ElectronicsFragment newInstance(){
         ElectronicsFragment electronicsFragment = new ElectronicsFragment();
@@ -41,7 +45,17 @@ public class ElectronicsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerView=view.findViewById(R.id.recyclerView);
+        mImageSlider = view.findViewById(R.id.imageSlider4);
+        setSlidingImages();
         buildRecyclerViewData();
+    }
+
+    private void setSlidingImages() {
+        List<SlideModel> slideModelList = new ArrayList<>();
+        slideModelList.add(new SlideModel(R.drawable.bluetooth_speaker, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.laptop, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.mobile, ScaleTypes.FIT));
+        mImageSlider.setImageList(slideModelList, ScaleTypes.FIT);
     }
 
     private void buildRecyclerViewData() {

@@ -12,12 +12,22 @@
         android:weightSum="1"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_150"
-            android:scaleType="fitXY"
-            android:src="@drawable/smart_devices" />
+            android:elevation="@dimen/dp_10"
+            android:layout_height="wrap_content">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSlider4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150"
+                android:layout_margin="@dimen/dp_5"
+                android:scaleType="fitXY"
+                app:iss_auto_cycle="true"
+                app:iss_delay="0"
+                app:iss_period="1200"
+                android:src="@drawable/package_study_table" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/tvBrowseByRoomType"

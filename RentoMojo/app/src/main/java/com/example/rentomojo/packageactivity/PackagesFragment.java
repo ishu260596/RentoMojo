@@ -27,7 +27,7 @@ public class PackagesFragment extends Fragment {
     public PackagesFragment() {
     }
 
-    public static PackagesFragment newInstance(){
+    public static PackagesFragment newInstance() {
         PackagesFragment packagesFragment = new PackagesFragment();
         return packagesFragment;
     }
@@ -42,16 +42,18 @@ public class PackagesFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mImageSlider = view.findViewById(R.id.imageSlider);
+        mImageSlider = view.findViewById(R.id.imageSlider1);
         setSlidingImages();
     }
 
     private void setSlidingImages() {
         List<SlideModel> slideModelList = new ArrayList<>();
         slideModelList.add(new SlideModel(R.drawable.sofa_table, ScaleTypes.FIT));
-        slideModelList.add(new SlideModel(R.drawable.air_cooler, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.television, ScaleTypes.FIT));
         slideModelList.add(new SlideModel(R.drawable.mobiles, ScaleTypes.FIT));
-        slideModelList.add(new SlideModel(R.drawable.massagers, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.treadmills, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.home_decoration, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.washing_machine, ScaleTypes.FIT));
         mImageSlider.setImageList(slideModelList, ScaleTypes.FIT);
     }
 }
