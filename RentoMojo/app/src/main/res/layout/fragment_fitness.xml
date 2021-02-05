@@ -15,9 +15,9 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_160"
+            android:layout_height="@dimen/dp_150"
             android:scaleType="fitXY"
-            android:src="@drawable/package_study_table" />
+            android:src="@drawable/fitness_cover_photo" />
 
         <TextView
             android:id="@+id/tvBrowseByRoomType"
@@ -30,8 +30,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_marginStart="@dimen/dp_14"
-            android:layout_marginEnd="@dimen/dp_14"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

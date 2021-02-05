@@ -48,13 +48,13 @@ public class AppliancesFragment extends Fragment {
         List<PackageItem> packageItemList_1 = new ArrayList<>();
         for (int i = 0; i < 200; i++) {
             if (i % 10 == 0) {
-                packageItemList_1.add(new PackageItem(R.drawable.air_conditioner, "Air Conditioner", "3 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.air_cooler, "Air Coolers", "3 Products"));
             }if (i % 10 == 1) {
-                packageItemList_1.add(new PackageItem(R.drawable.semiautometic_washingmachine, "Semi Autometic..", "2 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.fully_autometic, "Fully Auto..", "2 Products"));
             }if (i % 10 == 2) {
                 packageItemList_1.add(new PackageItem(R.drawable.television, "Television", "5 Products"));
             }if (i % 10 == 3) {
-                packageItemList_1.add(new PackageItem(R.drawable.singledoor_refrigerator, "Singledoor..", "4 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.refrigerator, "Refrigerator", "4 Products"));
             }if (i % 10 == 4) {
                 packageItemList_1.add(new PackageItem(R.drawable.water_purifier, "Water Purifier", "3 Products"));
             }if (i % 10 == 5) {
@@ -62,7 +62,7 @@ public class AppliancesFragment extends Fragment {
             }if (i % 10 == 6) {
                 packageItemList_1.add(new PackageItem(R.drawable.microwave, "Micro Wave", "2 Products"));
             }if (i % 10 == 7) {
-                packageItemList_1.add(new PackageItem(R.drawable.refrigerator, "Refrigerator", "1 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.singledoor_refrigerator, "Singledoor...", "1 Products"));
             }if (i % 10 == 8) {
                 packageItemList_1.add(new PackageItem(R.drawable.air_coolers, "Air Coolers", "3 Products"));
             }if (i % 10 == 9) {

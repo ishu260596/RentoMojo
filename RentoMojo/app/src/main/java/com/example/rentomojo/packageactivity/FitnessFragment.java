@@ -50,11 +50,11 @@ public class FitnessFragment extends Fragment {
             if (i % 4 == 0) {
                 packageItemList_1.add(new PackageItem(R.drawable.treadmills, "Treadmills", "5 Products"));
             }if (i % 4 == 1) {
-                packageItemList_1.add(new PackageItem(R.drawable.cross_trainers, "Cross Trainers", "8 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.cross_trainers, "Cross Trainer", "8 Products"));
             }if (i % 4 == 2) {
-                packageItemList_1.add(new PackageItem(R.drawable.exercise_bike, "Exercise Bikes", "4 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.exercise_bikes, "Exercise Bikes", "4 Products"));
             }if (i % 4 == 3) {
-                packageItemList_1.add(new PackageItem(R.drawable.massagers, "Massagers", "1 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.massager, "Massagers", "1 Products"));
             }
         }
 
