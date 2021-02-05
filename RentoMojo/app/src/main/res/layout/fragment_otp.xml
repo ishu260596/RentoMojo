@@ -1,47 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="@dimen/dp_20"
-    android:layout_marginStart="@dimen/dp_30"
-    android:layout_marginEnd="@dimen/dp_30"
     android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_30"
     android:layout_marginTop="@dimen/dp_50"
+    android:layout_marginEnd="@dimen/dp_30"
+    android:elevation="@dimen/dp_20"
     tools:context=".cart_activity.MobileVerificationFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_marginBottom="@dimen/dp_20"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20">
 
         <TextView
             android:id="@+id/tvEnterMobileNumber"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:padding="@dimen/dp_20"
-            android:textSize="@dimen/sp_20"
-            android:text="@string/enter_your_mobile_number"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_20"
+            android:text="@string/enter_your_mobile_number"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/etEnterNumber"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="@dimen/dp_20"
-            app:layout_constraintTop_toBottomOf="@id/tvEnterMobileNumber"
+            android:id="@+id/etEnterMobileNumber"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEnterMobileNumber" />
+
+        <TextView
+            android:id="@+id/tvOtpSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="@string/otp_sent"
+            app:layout_constraintEnd_toEndOf="@id/etEnterMobileNumber"
+            app:layout_constraintTop_toBottomOf="@id/etEnterMobileNumber" />
 
         <Button
-            android:id="@+id/btnContinue"
+            android:id="@+id/btnResend"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:text="@string/resend"
+            android:textColor="@color/LightGreen"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableStart="@drawable/ic_resend_enabled"
+            android:paddingStart="@dimen/dp_30"
+            android:paddingEnd="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/btnChange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOtpSent" />
+
+        <Button
+            android:id="@+id/btnChange"
+            android:background="@color/white"
+            android:text="@string/change"
+            android:textColor="@color/LightGreen"
+            android:paddingEnd="@dimen/dp_40"
+            android:paddingStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnResend"
+            app:layout_constraintTop_toBottomOf="@id/tvOtpSent" />
+
+        <Button
+            android:id="@+id/btn_Continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_20"
             android:background="@color/Red"
             android:text="@string/Continue"
             android:textColor="@color/white"
-            android:layout_margin="@dimen/dp_20"
-            app:layout_constraintTop_toBottomOf="@id/etEnterNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            app:layout_constraintTop_toBottomOf="@id/btnResend" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
