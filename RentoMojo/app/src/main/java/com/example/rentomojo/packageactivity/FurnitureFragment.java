@@ -50,22 +50,17 @@ public class FurnitureFragment extends Fragment {
         List<PackageItem> packageItemList_1 = new ArrayList<>();
         for (int i = 0; i < 200; i++) {
             if (i % 6 == 0) {
-                packageItemList_1.add(new PackageItem(R.drawable.sofa_table, "Sofa & Table", "Rs 20,000"));
-            }
-            if (i % 6 == 1) {
-                packageItemList_1.add(new PackageItem(R.drawable.home_decoration, "Room Decoration", "Rs 25,000"));
-            }
-            if (i % 6 == 2) {
-                packageItemList_1.add(new PackageItem(R.drawable.book_shelf, "Book Shelf", "Rs 14,400"));
-            }
-            if (i % 6 == 3) {
-                packageItemList_1.add(new PackageItem(R.drawable.shelf, "Shoe Shelf", "Rs 14,400"));
-            }
-            if (i % 6 == 4) {
-                packageItemList_1.add(new PackageItem(R.drawable.study_table, "Study Table Combo", "Rs 8,000"));
-            }
-            if (i % 6 == 5) {
-                packageItemList_1.add(new PackageItem(R.drawable.bed_package, "Best Package", "Rs 8,000"));
+                packageItemList_1.add(new PackageItem(R.drawable.sofa_table, "Sofa & Table", "8 Products"));
+            }if (i % 6 == 1) {
+                packageItemList_1.add(new PackageItem(R.drawable.home_decoration, "Room Decoration", "3 Products"));
+            }if (i % 6 == 2) {
+                packageItemList_1.add(new PackageItem(R.drawable.book_shelf, "Book Shelf", "5 Products"));
+            }if (i % 6 == 3) {
+                packageItemList_1.add(new PackageItem(R.drawable.shelf, "Shoe Shelf", "3 Products"));
+            }if (i % 6 == 4) {
+                packageItemList_1.add(new PackageItem(R.drawable.study_table, "Study Table Combo", "10 Products"));
+            }if (i % 6 == 5) {
+                packageItemList_1.add(new PackageItem(R.drawable.bed_package, "Bed Package", "13 Products"));
             }
         }
 

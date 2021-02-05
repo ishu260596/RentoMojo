@@ -158,6 +158,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         mBtnReferNow.setOnClickListener(this);
         mCardViewPackages.setOnClickListener(this);
         mCardViewUpto.setOnClickListener(this);
+        mCardViewFurniture.setOnClickListener(this);
+        mCardViewAppliances.setOnClickListener(this);
+        mCardViewFitness.setOnClickListener(this);
+        mCardViewElectronics.setOnClickListener(this);
+        mCardviewWFHEssentials.setOnClickListener(this);
+
     }
 
 
@@ -171,17 +177,39 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.tvOffers:
-                Intent intent = new Intent(getContext(), OffersAndPromotionsActivity.class);
-                startActivity(intent);
-                break;
             case R.id.tvSearchCity:
                 Intent intent1 = new Intent(getActivity(), SelectCityActivity.class);
                 startActivity(intent1);
                 break;
+            case R.id.tvOffers:
+                Intent intent = new Intent(getContext(), OffersAndPromotionsActivity.class);
+                startActivity(intent);
+                break;
             case R.id.tvSafetyKnowMore:
                 Intent intent2 = new Intent(getActivity(), WebViewActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.clUptoOffHF:
+                Intent intent5 = new Intent(getActivity(), OfferActivity.class);
+                startActivity(intent5);
+                break;
+            case R.id.clPackagesHF:
+                goToPackagesActivity();
+                break;
+            case R.id.clAppliancesHF:
+                goToPackagesActivity();
+                break;
+            case R.id.clElectronicsHF:
+                goToPackagesActivity();
+                break;
+            case R.id.clFurnitureHF:
+                goToPackagesActivity();
+                break;
+            case R.id.clFitnessHF:
+                goToPackagesActivity();
+                break;
+            case R.id.clWfhEssentialsHF:
+                goToPackagesActivity();
                 break;
             case R.id.btnReferNow:
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity(), R.style.BottomSheetDialogTheme);
@@ -219,18 +247,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
                     }
                 });
+                break;
 
-                break;
-            case R.id.clPackagesHF:
-                Intent intent4 = new Intent(getActivity(), PackageActivity.class);
-                startActivity(intent4);
-                break;
-            case R.id.clUptoOffHF:
-                Intent intent5 = new Intent(getActivity(), OfferActivity.class);
-                startActivity(intent5);
-                break;
 
         }
+
+    }
+
+    private void goToPackagesActivity() {
+        Intent intent = new Intent(getActivity(), PackageActivity.class);
+        startActivity(intent);
     }
 
 }

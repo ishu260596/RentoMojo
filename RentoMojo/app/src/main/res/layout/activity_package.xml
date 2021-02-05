@@ -10,12 +10,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:paddingStart="@dimen/dp_20"
         android:drawableStart="@drawable/ic_baseline_arrow_back_24"
         android:drawablePadding="@dimen/dp_20"
         android:gravity="clip_vertical"
-        android:paddingTop="@dimen/dp_5"
-        android:paddingBottom="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
         android:text="@string/back"
         android:textSize="@dimen/sp_22" />
 
@@ -23,10 +24,11 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/Red"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/refer"
+        android:focusableInTouchMode="true"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/refer"
         app:tabTextColor="@color/black" />
 
     <androidx.viewpager.widget.ViewPager

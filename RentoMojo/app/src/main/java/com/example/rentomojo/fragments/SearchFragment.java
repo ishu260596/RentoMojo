@@ -158,8 +158,14 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         mRecyclerViewSecond = view.findViewById(R.id.recyclerViewSecondSF);
         mRecyclerViewThird = view.findViewById(R.id.recyclerViewThirdSF);
         mEtSearch = view.findViewById(R.id.etSearchSF);
+
         mCardViewPackages.setOnClickListener(this);
         mCardViewUpto.setOnClickListener(this);
+        mCardViewFurniture.setOnClickListener(this);
+        mCardViewAppliances.setOnClickListener(this);
+        mCardViewFitness.setOnClickListener(this);
+        mCardViewElectronics.setOnClickListener(this);
+        mCardviewWFHEssentials.setOnClickListener(this);
     }
 
     @Override
@@ -172,14 +178,34 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.clPackagesSF:
-                Intent intent = new Intent(getActivity(), PackageActivity.class);
-                startActivity(intent);
-                break;
             case R.id.clUptoOffSF:
                 Intent intent1 = new Intent(getActivity(), OfferActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.clPackagesSF:
+                goToPackagesActivity();
+                break;
+            case R.id.clAppliancesSF:
+                goToPackagesActivity();
+                break;
+            case R.id.clElectronicsSF:
+                goToPackagesActivity();
+                break;
+            case R.id.clFurnitureSF:
+                goToPackagesActivity();
+                break;
+            case R.id.clFitnessSF:
+                goToPackagesActivity();
+                break;
+            case R.id.clWfhEssentialsSF:
+                goToPackagesActivity();
+                break;
 
         }
+    }
+
+    private void goToPackagesActivity() {
+        Intent intent = new Intent(getActivity(), PackageActivity.class);
+        startActivity(intent);
     }
 }

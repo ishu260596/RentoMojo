@@ -1,6 +1,7 @@
 package com.example.rentomojo.recyclerview;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -40,7 +41,7 @@ public class SelectCityViewHolder extends RecyclerView.ViewHolder {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                constraintLayout.setBackgroundColor(R.color.black);
+                constraintLayout.setBackgroundColor(Color.parseColor("#4DDFD2"));
                 listner.onClick(selectCityModelClass.getCityName());
             }
         });
