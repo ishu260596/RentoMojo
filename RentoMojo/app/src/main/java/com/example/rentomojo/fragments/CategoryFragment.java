@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.CategoryItem;
 import com.example.rentomojo.recyclerview.CategoryViewHolderAdapterFour;
@@ -73,70 +74,15 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
     }
 
     private void buildRecyclerViewData_1() {
-        List<CategoryItem> categoryItemList_1 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 10 == 0) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.air_conditioner, "Air Conditioner", "Rs 20,000"));
-            }
-            if (i % 10 == 1) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.semiautometic_washingmachine, "Semi Autometic..", "Rs 12,000"));
-            }
-            if (i % 10 == 2) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.television, "Television", "Rs 14,400"));
-            }
-            if (i % 10 == 3) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.singledoor_refrigerator, "Singledoor..", "Rs 12,000"));
-            }
-            if (i % 10 == 4) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.water_purifier, "Water Purifier", "Rs 8,000"));
-            }
-            if (i % 10 == 5) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.washing_machine, "Fully Autometic..", "Rs 25,000"));
-            }
-            if (i % 10 == 6) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.microwave, "Micro Wave", "Rs 6,000"));
-            }
-            if (i % 10 == 7) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.refrigerator, "Refrigerator", "Rs 28,999"));
-            }
-            if (i % 10 == 8) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.air_coolers, "Air Coolers", "Rs 12,000"));
-            }
-            if (i % 10 == 9) {
-                categoryItemList_1.add(new CategoryItem(R.drawable.led_tv, "LED Tv", "Rs 12,000"));
-            }
-        }
-
+        List<CategoryItem> categoryItemList_1 = GetLists.getCategoryItemList1();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView_1.setLayoutManager(linearLayoutManager);
         CategoryViewHolderAdapterOne adapterOne = new CategoryViewHolderAdapterOne(categoryItemList_1);
         mRecyclerView_1.setAdapter(adapterOne);
-
     }
 
     private void buildRecyclerViewData_2() {
-        List<CategoryItem> categoryItemList_2 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 6 == 0) {
-                categoryItemList_2.add(new CategoryItem(R.drawable.bed, "Bed", "Rs 20,000"));
-            }
-            if (i % 6 == 1) {
-                categoryItemList_2.add(new CategoryItem(R.drawable.sofa, "Sofa", "Rs 25,000"));
-            }
-            if (i % 6 == 2) {
-                categoryItemList_2.add(new CategoryItem(R.drawable.poise_queen_bed, "Poise Queen..", "Rs 14,400"));
-            }
-            if (i % 6 == 3) {
-                categoryItemList_2.add(new CategoryItem(R.drawable.diner_table, "Dinner Table", "Rs 14,400"));
-            }
-            if (i % 6 == 4) {
-                categoryItemList_2.add(new CategoryItem(R.drawable.study_table, "Study Table", "Rs 8,000"));
-            }
-            if (i % 6 == 5) {
-                categoryItemList_2.add(new CategoryItem(R.drawable.atticus_single_bed, "Atticus Single..", "Rs 8,000"));
-            }
-        }
-
+        List<CategoryItem> categoryItemList_2 = GetLists.getCatergoryItemList2();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView_2.setLayoutManager(linearLayoutManager);
         CategoryViewHolderAdapterTwo adapterTwo = new CategoryViewHolderAdapterTwo(categoryItemList_2);
@@ -145,59 +91,15 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
     }
 
     private void buildRecyclerViewData_3() {
-        List<CategoryItem> categoryItemList_3 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 6 == 0) {
-                categoryItemList_3.add(new CategoryItem(R.drawable.mobile, "Mobiles", "Rs 20,000"));
-            }
-            if (i % 6 == 1) {
-                categoryItemList_3.add(new CategoryItem(R.drawable.laptop, "Laptops", "Rs 25,000"));
-            }
-            if (i % 6 == 2) {
-                categoryItemList_3.add(new CategoryItem(R.drawable.bluetooth_speaker, "Bluetooth Speaker", "Rs 14,400"));
-            }
-            if (i % 6 == 3) {
-                categoryItemList_3.add(new CategoryItem(R.drawable.led_tv, "LED TV", "Rs 14,400"));
-            }
-            if (i % 6 == 4) {
-                categoryItemList_3.add(new CategoryItem(R.drawable.electric_iron, "Electric Iron", "Rs 8,000"));
-            }
-            if (i % 6 == 5) {
-                categoryItemList_3.add(new CategoryItem(R.drawable.home_theatre, "Home Theatre", "Rs 8,000"));
-            }
-        }
-
-
+        List<CategoryItem> categoryItemList_3 = GetLists.getCatergoryItemList3();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView_3.setLayoutManager(linearLayoutManager);
         CategoryViewHolderAdapterThree adapterThree = new CategoryViewHolderAdapterThree(categoryItemList_3);
         mRecyclerView_3.setAdapter(adapterThree);
-
     }
 
     private void buildRecyclerViewData_4() {
-        List<CategoryItem> categoryItemList_4 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 6 == 0) {
-                categoryItemList_4.add(new CategoryItem(R.drawable.sofa_table, "Sofa & Table", "Rs 20,000"));
-            }
-            if (i % 6 == 1) {
-                categoryItemList_4.add(new CategoryItem(R.drawable.home_decoration, "Room Decoration", "Rs 25,000"));
-            }
-            if (i % 6 == 2) {
-                categoryItemList_4.add(new CategoryItem(R.drawable.book_shelf, "Book Shelf", "Rs 14,400"));
-            }
-            if (i % 6 == 3) {
-                categoryItemList_4.add(new CategoryItem(R.drawable.shelf, "Shoe Shelf", "Rs 14,400"));
-            }
-            if (i % 6 == 4) {
-                categoryItemList_4.add(new CategoryItem(R.drawable.study_table, "Study Table Combo", "Rs 8,000"));
-            }
-            if (i % 6 == 5) {
-                categoryItemList_4.add(new CategoryItem(R.drawable.bed_package, "Best Package", "Rs 8,000"));
-            }
-        }
-
+        List<CategoryItem> categoryItemList_4 = GetLists.getCatergoryItemList4();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView_4.setLayoutManager(linearLayoutManager);
         CategoryViewHolderAdapterFour adapterFour = new CategoryViewHolderAdapterFour(categoryItemList_4);
@@ -227,7 +129,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
 
     private void redirectToPackages(int position) {
         Intent intent = new Intent(getActivity(), PackageActivity.class);
-        intent.putExtra("position",position);
+        intent.putExtra("position", position);
         startActivity(intent);
     }
 }

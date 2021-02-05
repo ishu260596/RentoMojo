@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 import com.example.rentomojo.recyclerview.CategoryItem;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
@@ -42,39 +43,7 @@ public class ElectronicFragment extends Fragment {
     }
 
     private void setRecyclerViewData() {
-        List<ItemHFModelClass> categoryItemList_1 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 10 == 0) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.air_conditioner, "₹20,000m/o", "Air Conditioner"));
-            }
-            if (i % 10 == 1) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.semiautometic_washingmachine, "₹12,000m/o", "Semi Automatic"));
-            }
-            if (i % 10 == 2) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.television, "₹14,400m/o", "Television"));
-            }
-            if (i % 10 == 3) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.singledoor_refrigerator, "₹12,000m/o", "Singledoor"));
-            }
-            if (i % 10 == 4) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.water_purifier, "₹8,000m/o", "Water Purifier"));
-            }
-            if (i % 10 == 5) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.washing_machine, "₹25,000m/o.", "Fully Automatic"));
-            }
-            if (i % 10 == 6) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.microwave, "₹6,000m/o", "Micro Wave"));
-            }
-            if (i % 10 == 7) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.refrigerator, "₹28,999m/o", "Refrigerator"));
-            }
-            if (i % 10 == 8) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.air_coolers, "₹12,000m/o", "Air Coolers"));
-            }
-            if (i % 10 == 9) {
-                categoryItemList_1.add(new ItemHFModelClass(R.drawable.led_tv, "₹12,000m/o", "LED Tv"));
-            }
-        }
+        List<ItemHFModelClass> categoryItemList_1 = GetLists.getcategoryItemList_Item2();
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         OffItemAdapter ItemsInHFViewHolderAdapter = new OffItemAdapter(categoryItemList_1);
