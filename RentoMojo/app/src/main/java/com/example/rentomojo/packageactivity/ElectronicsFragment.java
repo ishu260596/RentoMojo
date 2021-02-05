@@ -49,13 +49,13 @@ public class ElectronicsFragment extends Fragment {
         List<PackageItem> packageItemList_1 = new ArrayList<>();
         for (int i = 0; i < 200; i++) {
             if (i % 6 == 0) {
-                packageItemList_1.add(new PackageItem(R.drawable.mobiles, "Smartphones", "10 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.mobile, "Smartphones", "10 Products"));
             }if (i % 6 == 1) {
                 packageItemList_1.add(new PackageItem(R.drawable.bluetooth_speaker, "Smart Devic..", "2 Products"));
             }if (i % 6 == 2) {
-                packageItemList_1.add(new PackageItem(R.drawable.laptops, "Laptops", "7 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.laptop, "Laptops", "7 Products"));
             }if (i % 6 == 3) {
-                packageItemList_1.add(new PackageItem(R.drawable.led_tv, "LED TV", "4 Products"));
+                packageItemList_1.add(new PackageItem(R.drawable.television, "LED TV", "4 Products"));
             }if (i % 6 == 4) {
                 packageItemList_1.add(new PackageItem(R.drawable.electric_iron, "Electric Ir..", "2 Products"));
             }if (i % 6 == 5) {
