@@ -50,7 +50,7 @@
     <string name="skip_new">skip ></string>
     <string name="trending_search_xyt">trending_search_xyt</string>
     <string name="iguserlogo">iguserlogo</string>
-    <string name="hello_guest">Hello Guest</string>
+    <string name="hello_guest">Hello Sainath Reddy</string>
     <string name="bengalore">bengalore</string>
 
 
@@ -72,6 +72,10 @@
     <string name="Continue">Continue</string>
     <string name="browse_catalogue">Browse Catalogue</string>
     <string name="how_do_you_want_to_contact_our_customer_care">How Do you want to contact our Customer Care?</string>
-    <string name="make_a_voice_call">Make a voice call</string>
+
     <string name="send_a_mail">Send an email</string>
+    <string name="verify_phone_number">Verify phone number</string>
+    <string name="how_do_you_want_to_contact_our_cutomer_care">How do you want to contact our cutomer care?</string>
+    <string name="make_a_voice_call">Make a voice call</string>
+    <string name="send_an_email">Send an Email</string>
 </resources>
