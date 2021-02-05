@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentoMojo">
-        <activity android:name=".activities.ShoppingCartActivity"></activity>
+        <activity android:name=".activities.ShoppingCartActivity"/>
         <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.HomeActivity" />
         <activity android:name=".activities.GetStartedActivity" />
@@ -27,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
 
                 <action android:name="android.intent.action.MAIN" />
-                />
             </intent-filter>
         </activity>
 

@@ -189,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_32"
                 android:layout_marginStart="@dimen/sp_10"
-                android:text="Total Refundable Deposit" />
+                android:text="@string/total_refundable_deposit" />
 
 
         </RelativeLayout>
