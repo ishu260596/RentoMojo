@@ -22,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.rentomojo.R;
 import com.example.rentomojo.activities.LoginAcitvity;
+import com.example.rentomojo.activities.OffersAndPromotionsActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import org.w3c.dom.Text;
@@ -45,12 +46,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
 
     }
 
-    private void getDatafromIntent() {
-        if (getActivity().getIntent() != null && getActivity().getIntent().getExtras() != null) {
-            String data = getActivity().getIntent().getStringExtra("data");
-            mtvUsernaem.setText(data);
-        }
-    }
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -72,7 +68,6 @@ public class UserFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mtvUsernaem = view.findViewById(R.id.Username);
-        getDatafromIntent();
     }
 
 
@@ -120,7 +115,13 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                 });
 
                 break;
+            case R.id.cv2:
+                intent= new Intent(getActivity(), OffersAndPromotionsActivity.class);
+                startActivity(intent);
+            case R.id.cv3:
+
         }
+
 
 
     }
