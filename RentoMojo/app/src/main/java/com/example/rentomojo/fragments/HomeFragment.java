@@ -14,20 +14,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
-import com.example.rentomojo.activities.OfferPromotionsActivity;
+import com.example.rentomojo.activities.OffersAndPromotionsActivity;
 import com.example.rentomojo.activities.SelectCityActivity;
 import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
-import com.example.rentomojo.recyclerview.NewOfferAdapterVieHolderClass;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
@@ -164,7 +161,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tvOffers:
-                Intent intent = new Intent(getContext(), OfferPromotionsActivity.class);
+                Intent intent = new Intent(getContext(), OffersAndPromotionsActivity.class);
                 startActivity(intent);
                 break;
             case R.id.tvSearchCity:
