@@ -1,82 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
 
-   <androidx.cardview.widget.CardView
-      app:layout_constraintTop_toTopOf="parent"
-       android:layout_width="match_parent"
-       android:layout_margin="@dimen/dp_20"
-       android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        app:layout_constraintTop_toTopOf="parent">
 
-       <androidx.constraintlayout.widget.ConstraintLayout
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-       <ImageView
-           android:id="@+id/ivImageView"
-           android:layout_width="match_parent"
-           android:src="@drawable/almera"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintEnd_toEndOf="parent"
-           android:scaleType="fitXY"
-           android:layout_height="@dimen/dp_200"/>
-       <TextView
-           android:id="@+id/tvBedroomBasic"
-           app:layout_constraintTop_toBottomOf="@id/ivImageView"
-           app:layout_constraintStart_toStartOf="parent"
-           android:text="@string/bedroom_basic"
-           android:padding="@dimen/dp_5"
-           android:layout_marginStart="@dimen/dp_20"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/ivImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:scaleType="fitXY"
+                android:src="@drawable/almera"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-           <TextView
-               android:id="@+id/tvLine"
-               app:layout_constraintTop_toBottomOf="@id/tvBedroomBasic"
-               app:layout_constraintStart_toStartOf="@id/tvBedroomBasic"
-               android:background="@color/grey"
-               android:layout_width="@dimen/dp_180"
-               android:layout_height="@dimen/dp_2"/>
+            <TextView
+                android:id="@+id/tvBedroomBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:padding="@dimen/dp_5"
+                android:text="@string/bedroom_basic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivImageView" />
 
-           <TextView
-               android:id="@+id/tvPrice"
-               app:layout_constraintTop_toBottomOf="@id/tvLine"
-               app:layout_constraintStart_toStartOf="@id/tvLine"
-               android:text="@string/Rs"
-               android:padding="@dimen/dp_5"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvLine"
+                android:layout_width="@dimen/dp_180"
+                android:layout_height="@dimen/dp_2"
+                android:background="@color/grey"
+                app:layout_constraintStart_toStartOf="@id/tvBedroomBasic"
+                app:layout_constraintTop_toBottomOf="@id/tvBedroomBasic" />
 
-           <ImageView
-               android:id="@+id/ivPackageProducts"
-               android:layout_width="wrap_content"
-               android:src="@drawable/package_product"
-               android:layout_marginStart="@dimen/dp_20"
-               app:layout_constraintEnd_toStartOf="@id/tvItem"
-               app:layout_constraintStart_toEndOf="@id/tvLine"
-               app:layout_constraintTop_toBottomOf="@id/ivImageView"
-               app:layout_constraintBottom_toBottomOf="parent"
-               android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_5"
+                android:text="@string/Rs"
+                app:layout_constraintStart_toStartOf="@id/tvLine"
+                app:layout_constraintTop_toBottomOf="@id/tvLine" />
 
-           <TextView
-               android:id="@+id/tvItem"
-               app:layout_constraintStart_toEndOf="@id/ivPackageProducts"
-               app:layout_constraintTop_toBottomOf="@id/ivImageView"
-               app:layout_constraintBottom_toBottomOf="parent"
-               android:text="@string/item"
-               android:layout_marginStart="@dimen/dp_20"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/ivPackageProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/package_product"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLine"
+                app:layout_constraintTop_toBottomOf="@id/ivImageView" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/tvItem"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_2"
+                android:layout_marginEnd="@dimen/dp_2"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivPackageProducts"
+                app:layout_constraintTop_toBottomOf="@id/ivImageView"
+                app:layout_goneMarginStart="@dimen/dp_2"
+                app:lottie_rawRes="@raw/cartitembuy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-       </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-   </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

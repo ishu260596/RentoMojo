@@ -22,8 +22,8 @@
         <activity android:name=".activities.ReadMoreActivity" />
         <activity android:name=".packageactivity.PackageActivity" />
         <activity android:name=".activities.LoginAcitvity" />
-        <activity android:name=".activities.WebViewActivity"/>
-        <activity android:name=".explore_packages.ExplorePackageActivity"/>
+        <activity android:name=".activities.WebViewActivity" />
+        <activity android:name=".explore_packages.ExplorePackageActivity" />
         <activity android:name=".activities.HomeActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />

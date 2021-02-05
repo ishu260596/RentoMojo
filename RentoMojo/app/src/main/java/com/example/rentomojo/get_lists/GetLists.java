@@ -431,7 +431,7 @@ public class GetLists {
                 explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.bed, "Magnum Queen Master", "Rs 1000/mo", "3 Items"));
             }
             if (i % 5 == 2) {
-                explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "2 Items"));
+                explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.shelf, "Sofa", "Rs 700/mo", "2 Items"));
             }
             if (i % 5 == 3) {
                 explorePackageModelList_1.add(new ExplorePackageModel(R.drawable.bedthree, "Napstar Single Bed", "Rs 570/mo", "8 Items"));

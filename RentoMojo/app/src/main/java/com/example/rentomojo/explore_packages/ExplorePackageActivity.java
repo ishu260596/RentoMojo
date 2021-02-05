@@ -5,14 +5,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.cart_activity.CartActivity;
 
-public class ExplorePackageActivity extends AppCompatActivity {
+public class ExplorePackageActivity extends AppCompatActivity implements CommunicatingFragmentListner {
 
     private FragmentManager fragmentManager;
+    private ExplorePackageModel model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class ExplorePackageActivity extends AppCompatActivity {
         switch (position) {
             case 1:
                 BedroomFragment bedroomFragment = new BedroomFragment();
+                bedroomFragment.setListner(this);
                 launchFragment(bedroomFragment, "BedroomFragment");
                 break;
             case 2:
@@ -82,5 +86,21 @@ public class ExplorePackageActivity extends AppCompatActivity {
     private void launchFragment(Fragment fragment, String tag) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.flContainer, fragment, tag).commit();
+    }
+
+    @Override
+    public void onItemClick(ExplorePackageModel model) {
+        Log.d("tag", "inactivity");
+        this.model = model;
+        if (model != null) {
+            this.model = model;
+            Intent intent = new Intent(ExplorePackageActivity.this, CartActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("name", model.getName());
+            bundle.putString("price", model.getPrice());
+            bundle.putInt("image", model.getImage());
+            intent.putExtra("data", bundle);
+            startActivity(intent);
+        }
     }
 }
