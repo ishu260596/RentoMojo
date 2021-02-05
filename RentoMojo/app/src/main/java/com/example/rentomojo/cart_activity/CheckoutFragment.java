@@ -29,6 +29,8 @@ public class CheckoutFragment extends Fragment {
     private TextView mPrice;
     private TextView tvTotalPrice;
     private TextView tvItemName;
+    private String name;
+    private String price;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,9 +48,9 @@ public class CheckoutFragment extends Fragment {
 
     private void getBundleData() {
         if (getArguments() != null) {
-            String name = getArguments().getString("name");
+            name = getArguments().getString("name");
             tvItemName.setText(name);
-            String price = getArguments().getString("price");
+            price = getArguments().getString("price");
             mPrice.setText(price);
             tvTotalPrice.setText(price);
             mImageView.setImageResource(getArguments().getInt("image"));
@@ -85,6 +87,10 @@ public class CheckoutFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 PlaceOrderFragment placeOrderFragment = new PlaceOrderFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("name", name);
+                bundle.putString("price", price);
+                placeOrderFragment.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.flContainer1, placeOrderFragment, "placeOrder").addToBackStack("placeOrder").commit();

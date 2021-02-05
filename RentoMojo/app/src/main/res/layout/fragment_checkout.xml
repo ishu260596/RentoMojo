@@ -362,6 +362,7 @@
                 android:paddingStart="@dimen/dp_20"
                 android:paddingEnd="@dimen/dp_20"
                 android:text="@string/proceed"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
