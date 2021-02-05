@@ -50,7 +50,7 @@
     <string name="skip_new">Skip ></string>
     <string name="trending_search_xyt">trending_search_xyt</string>
     <string name="iguserlogo">iguserlogo</string>
-    <string name="hello_guest">Hello Guest</string>
+    <string name="hello_guest">Hello Sainath Reddy</string>
     <string name="bengalore">bengalore</string>
 
 
@@ -76,4 +76,7 @@
     <string name="send_a_mail">Send an email</string>
     <string name="upto_70_off2">Upto 70% off</string>
     <string name="save_55">Save 55%</string>
+    <string name="verify_phone_number">Verify phone number</string>
+    <string name="how_do_you_want_to_contact_our_cutomer_care">How do you want to contact our cutomer care?</string>
+    <string name="send_an_email">Send an Email</string>
 </resources>

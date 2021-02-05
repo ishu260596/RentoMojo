@@ -48,7 +48,7 @@ public class AppliancesOfferFragment extends Fragment {
                 categoryItemList_3.add(new ItemHFModelClass(R.drawable.mobiles, "₹20,000m/o", "Mobiles"));
             }
             if (i % 6 == 1) {
-                categoryItemList_3.add(new ItemHFModelClass(R.drawable.laptops, "₹25,000", "Laptops"));
+                categoryItemList_3.add(new ItemHFModelClass(R.drawable.laptop, "₹25,000m/o", "Laptops"));
             }
             if (i % 6 == 2) {
                 categoryItemList_3.add(new ItemHFModelClass(R.drawable.bluetooth_speaker, "₹14,400m/o", "Bluetooth Speaker"));

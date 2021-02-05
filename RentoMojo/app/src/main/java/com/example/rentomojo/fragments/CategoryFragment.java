@@ -148,10 +148,10 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
         List<CategoryItem> categoryItemList_3 = new ArrayList<>();
         for (int i = 0; i < 200; i++) {
             if (i % 6 == 0) {
-                categoryItemList_3.add(new CategoryItem(R.drawable.mobiles, "Mobiles", "Rs 20,000"));
+                categoryItemList_3.add(new CategoryItem(R.drawable.mobile, "Mobiles", "Rs 20,000"));
             }
             if (i % 6 == 1) {
-                categoryItemList_3.add(new CategoryItem(R.drawable.laptops, "Laptops", "Rs 25,000"));
+                categoryItemList_3.add(new CategoryItem(R.drawable.laptop, "Laptops", "Rs 25,000"));
             }
             if (i % 6 == 2) {
                 categoryItemList_3.add(new CategoryItem(R.drawable.bluetooth_speaker, "Bluetooth Speaker", "Rs 14,400"));
