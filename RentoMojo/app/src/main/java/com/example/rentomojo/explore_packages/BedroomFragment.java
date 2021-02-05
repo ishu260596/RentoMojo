@@ -24,7 +24,6 @@ import java.util.List;
 public class BedroomFragment extends Fragment implements BuyItemClickListner {
 
     private RecyclerView recyclerView;
-    private ExplorePackageActivity explorePackageActivity;
     private ExplorePackageModel model;
     private CommunicatingFragmentListner listner;
 
@@ -38,7 +37,7 @@ public class BedroomFragment extends Fragment implements BuyItemClickListner {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        explorePackageActivity = (ExplorePackageActivity) context;
+
     }
 
     @Override
