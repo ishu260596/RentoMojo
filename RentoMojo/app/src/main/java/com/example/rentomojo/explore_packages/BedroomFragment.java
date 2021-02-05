@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,8 +65,13 @@ public class BedroomFragment extends Fragment implements BuyItemClickListner {
     public void onItemClick(ExplorePackageModel model) {
         if (model != null) {
             this.model = model;
-            Log.d("tag",model.getName()+"kjhjhjbhb");
-            listner.onItemClick(model);
+           new Handler().postDelayed(new Runnable() {
+               @Override
+               public void run() {
+                   listner.onItemClick(model);
+               }
+           },1500);
+
         }
     }
 
