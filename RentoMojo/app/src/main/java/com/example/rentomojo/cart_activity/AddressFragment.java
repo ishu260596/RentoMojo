@@ -10,22 +10,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import com.example.rentomojo.R;
 
-public class PlaceOrderFragment extends Fragment {
+public class AddressFragment extends Fragment {
 
-    private Button mBtnPlaceOrder;
-    private TextView mTvPrice_1;
-    private TextView mTvPrice_2;
-    private TextView mTvPrice_3;
+    private EditText mEtHouseNo;
+    private EditText mEtSociety;
+    private EditText mEtAddress;
+    private Button mBtnDone;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_place_order, container, false);
+        return inflater.inflate(R.layout.fragment_address, container, false);
     }
 
     @Override
@@ -35,9 +35,9 @@ public class PlaceOrderFragment extends Fragment {
     }
 
     private void initViews(View view) {
-        mBtnPlaceOrder=view.findViewById(R.id.btnPlaceOrder);
-        mTvPrice_1=view.findViewById(R.id.tvPrice_1);
-        mTvPrice_2=view.findViewById(R.id.tvPrice_2);
-        mTvPrice_3=view.findViewById(R.id.tvPrice_3);
+        mEtHouseNo=view.findViewById(R.id.etHouseNo);
+        mEtSociety=view.findViewById(R.id.etSociety);
+        mEtAddress=view.findViewById(R.id.etAddress);
+        mBtnDone=view.findViewById(R.id.btnDone);
     }
 }

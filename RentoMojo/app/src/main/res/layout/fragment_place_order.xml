@@ -64,7 +64,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvLine" />
 
             <TextView
-                android:id="@+id/tvPrice"
+                android:id="@+id/tvPrice_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp_20"
@@ -98,75 +98,78 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_20"
-                android:elevation="@dimen/dp_20"
                 android:layout_marginEnd="@dimen/dp_40"
+                android:elevation="@dimen/dp_20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvShiping">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:background="#c4c4c4"
+                    android:layout_height="match_parent"
                     android:layout_marginBottom="@dimen/dp_20"
-                    android:layout_height="match_parent">
+                    android:background="#c4c4c4">
+
                     <TextView
                         android:id="@+id/tvPayable"
-                        android:text="@string/payable"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:paddingStart="@dimen/dp_10"
-                        android:paddingEnd="@dimen/dp_10"
-                        android:paddingTop="@dimen/dp_1"
-                        android:paddingBottom="@dimen/dp_1"
-                        android:layout_marginStart="@dimen/dp_20"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:background="@color/Red"
-                        android:textColor="@color/white"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:background="@color/Red"
+                        android:paddingStart="@dimen/dp_10"
+                        android:paddingTop="@dimen/dp_1"
+                        android:paddingEnd="@dimen/dp_10"
+                        android:paddingBottom="@dimen/dp_1"
+                        android:text="@string/payable"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/tvTotalDeposit"
-                        android:padding="@dimen/dp_10"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginStart="@dimen/dp_20"
-                        app:layout_constraintTop_toBottomOf="@id/tvPayable"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:padding="@dimen/dp_10"
                         android:text="@string/total_deposit"
-                        android:layout_height="wrap_content" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvPayable" />
+
                     <TextView
                         android:id="@+id/tvTotalPayout"
-                        app:layout_constraintTop_toBottomOf="@id/tvTotalDeposit"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_20"
-                        app:layout_constraintStart_toStartOf="parent"
                         android:padding="@dimen/dp_10"
-                        android:textSize="@dimen/sp_20"
                         android:text="@string/total_payout"
-                        android:layout_height="wrap_content" />
+                        android:textSize="@dimen/sp_20"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTotalDeposit" />
+
                     <TextView
-                        android:id="@+id/tvPrice1"
-                        app:layout_constraintTop_toTopOf="@id/tvTotalDeposit"
+                        android:id="@+id/tvPrice_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:text="@string/Rs"
+                        android:textSize="@dimen/sp_20"
                         app:layout_constraintBottom_toBottomOf="@id/tvTotalDeposit"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTotalDeposit" />
+
+                    <TextView
+                        android:id="@+id/tvPrice_3"
                         android:layout_width="wrap_content"
-                        android:textSize="@dimen/sp_20"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/dp_20"
                         android:text="@string/Rs"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:id="@+id/tvPrice2"
                         android:textSize="@dimen/sp_20"
-                        android:layout_marginEnd="@dimen/dp_20"
-                        app:layout_constraintTop_toTopOf="@id/tvTotalPayout"
                         app:layout_constraintBottom_toBottomOf="@id/tvTotalPayout"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvPrice1"
-                        android:layout_width="wrap_content"
-                        android:text="@string/Rs"
-                        android:layout_height="wrap_content" />
-
+                        app:layout_constraintTop_toBottomOf="@id/tvPrice_2"
+                        app:layout_constraintTop_toTopOf="@id/tvTotalPayout" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             </androidx.cardview.widget.CardView>
 
@@ -177,14 +180,14 @@
 
     <Button
         android:id="@+id/btnPlaceOrder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/place_order"
-        android:background="@color/Red"
-        android:textColor="@color/white"
-        android:padding="@dimen/dp_20"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="@color/Red"
+        android:padding="@dimen/dp_20"
+        android:text="@string/place_order"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
