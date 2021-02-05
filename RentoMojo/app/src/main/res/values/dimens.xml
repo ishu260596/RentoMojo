@@ -120,5 +120,6 @@
     <dimen name="dp_140">140dp</dimen>
     <dimen name="dp_220">220dp</dimen>
     <dimen name="dp_190">190dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
 
 </resources>

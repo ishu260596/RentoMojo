@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rentomojo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,24 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentoMojo">
-        <activity android:name=".activities.OfferPromotionsActivity">
+        <activity android:name=".offer_upto_70.OfferActivity"><intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+
+            <action android:name="android.intent.action.MAIN" />
+            />
+        </intent-filter></activity>
+        <activity android:name=".activities.WebViewActivity" />
+        <activity android:name=".activities.OfferPromotionsActivity" />
+        <activity android:name=".packageactivity.PackageActivity" >
 
         </activity>
-        <activity android:name=".packageactivity.PackageActivity" />
-        <activity android:name=".activities.GetStartedActivity">
-
-        </activity>
-        <activity android:name=".activities.WelcomeActivity">
-
-        </activity>
+        <activity android:name=".activities.GetStartedActivity" />
+        <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.SelectCityActivity" />
         <activity android:name=".activities.LoginAcitvity" />
         <activity android:name=".activities.HomeActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-                <action android:name="android.intent.action.MAIN" />
-                />
-            </intent-filter>
+
         </activity>
 
         <meta-data

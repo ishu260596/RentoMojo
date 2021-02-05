@@ -13,7 +13,7 @@
     <string name="chose_by_apartment_type">Choose By Apartment type</string>
     <string name="bedroom">Bedroom</string>
     <string name="living_room">Living Room</string>
-   <string name="work_from_home">Work From Home</string>
+    <string name="work_from_home">Work From Home</string>
     <string name="kitchen_dining">Kitchen and Dining</string>
     <string name="smart_home">Smart Home</string>
     <string name="fitness_exercise">Fitness and Exercise</string>
@@ -68,4 +68,6 @@
     <string name="wfh10">WFH10</string>
     <string name="get_10_off_every_month_on_a_minimum">"Get 10% OFF every month on a minimum\nmonthly rental of Rs. 300 (maximum discount\nod Rs.200 per month)"</string>
     <string name="Continue">Continue</string>
+    <string name="upto_70_off2">Upto 70% off</string>
+    <string name="save_55">Save 55%</string>
 </resources>

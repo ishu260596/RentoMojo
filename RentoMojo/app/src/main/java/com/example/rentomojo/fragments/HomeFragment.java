@@ -7,13 +7,19 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,6 +30,7 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
 import com.example.rentomojo.activities.OfferPromotionsActivity;
 import com.example.rentomojo.activities.SelectCityActivity;
+import com.example.rentomojo.activities.WebViewActivity;
 import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
@@ -49,6 +56,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private RecyclerView mRecyclerViewFirst;
     private RecyclerView mRecyclerViewSecond;
     private Button mBtnReferNow;
+    public String phonenumberBD;
 
 
     public HomeFragment() {
@@ -172,6 +180,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent1);
                 break;
             case R.id.tvSafetyKnowMore:
+                Intent intent2 = new Intent(getActivity(), WebViewActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.btnReferNow:
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity(), R.style.BottomSheetDialogTheme);
@@ -180,11 +190,41 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 bottomSheetDialog.setContentView(view);
                 bottomSheetDialog.setCanceledOnTouchOutside(true);
                 bottomSheetDialog.show();
+                EditText mPhoneNumberBottom = bottomSheetDialog.findViewById(R.id.etBottomPhoneNumber);
+                Button btn = bottomSheetDialog.findViewById(R.id.btnBottomContinue);
+                mPhoneNumberBottom.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                        btn.setBackgroundResource(R.drawable.continue_btn_bg_red);
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s) {
+
+                    }
+                });
+                btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (mPhoneNumberBottom.getText().toString().isEmpty() || mPhoneNumberBottom.getText().toString().length() == 10) {
+                            mPhoneNumberBottom.setError("enter valid number");
+                            bottomSheetDialog.cancel();
+                        } else {
+                            mPhoneNumberBottom.setError("Enter valid number");
+                        }
+
+                    }
+                });
+
                 break;
             case R.id.clPackagesHF:
-                Intent intent2 = new Intent(getActivity(), PackageActivity.class);
-                startActivity(intent2);
+                Intent intent4 = new Intent(getActivity(), PackageActivity.class);
+                startActivity(intent4);
+                break;
         }
     }
-
 }

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:elevation="@dimen/dp_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cvConstraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8">
+
+        <ImageView
+            android:id="@+id/ivImageItemHFO"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_120"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="@id/cvConstraintLayout"
+            app:layout_constraintStart_toStartOf="@id/cvConstraintLayout"
+            app:layout_constraintTop_toTopOf="@id/cvConstraintLayout" />
+
+        <TextView
+            android:id="@+id/tvItemNameO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="Magnum Chest of ..."
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/ivImageItemHFO"
+            app:layout_constraintTop_toBottomOf="@id/ivImageItemHFO" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Rent"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toStartOf="@id/tvItemNameO"
+            app:layout_constraintTop_toBottomOf="@id/tvItemNameO" />
+
+        <TextView
+            android:id="@+id/tvPriceO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="Rs 249"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintStart_toStartOf="@id/tv2"
+            app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_55"
+            android:textColor="@color/rentomojo"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemNameO" />
+
+        <TextView
+            android:id="@+id/tvItemCancelPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="₹399/mo"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvPriceO"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriceO"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

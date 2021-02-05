@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".packageactivity.PackageActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        app:cardElevation="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+            android:drawablePadding="@dimen/dp_20"
+            android:gravity="clip_vertical"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/upto_70_off"
+            android:textSize="@dimen/sp_22" />
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutOffer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_20"
+        app:tabBackground="@drawable/tab_style_red"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/Red"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="0.5dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/Red"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="@color/white" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerOffer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10" />
+
+</LinearLayout>
