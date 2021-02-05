@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/dp_10"
     tools:context=".packageactivity.PackagesFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -266,6 +267,7 @@
             <LinearLayout
                 style="@style/linearLayoutInsideCardViewInFragments"
                 android:layout_marginStart="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_20">
 
                 <ImageView
@@ -288,11 +290,14 @@
             android:layout_height="@dimen/dp_100"
             app:layout_constraintEnd_toStartOf="@id/two_bhk"
             app:layout_constraintStart_toEndOf="@id/studio_apartment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dp_10"
             app:layout_constraintTop_toBottomOf="@id/choose_by_apartment_type">
 
             <LinearLayout
                 style="@style/linearLayoutInsideCardViewInFragments"
                 android:layout_marginStart="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_20">
 
                 <ImageView
@@ -320,6 +325,7 @@
             <LinearLayout
                 style="@style/linearLayoutInsideCardViewInFragments"
                 android:layout_marginStart="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_20">
 
                 <ImageView

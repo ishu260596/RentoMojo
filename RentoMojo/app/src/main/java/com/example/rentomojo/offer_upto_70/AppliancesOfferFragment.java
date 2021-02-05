@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 import com.example.rentomojo.recyclerview.CategoryItem;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.ItemsInHFViewHolderAdapter;
@@ -42,27 +43,7 @@ public class AppliancesOfferFragment extends Fragment {
     }
 
     private void setRecyclerViewData() {
-        List<ItemHFModelClass> categoryItemList_3 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 6 == 0) {
-                categoryItemList_3.add(new ItemHFModelClass(R.drawable.mobiles, "₹20,000m/o", "Mobiles"));
-            }
-            if (i % 6 == 1) {
-                categoryItemList_3.add(new ItemHFModelClass(R.drawable.laptop, "₹25,000m/o", "Laptops"));
-            }
-            if (i % 6 == 2) {
-                categoryItemList_3.add(new ItemHFModelClass(R.drawable.bluetooth_speaker, "₹14,400m/o", "Bluetooth Speaker"));
-            }
-            if (i % 6 == 3) {
-                categoryItemList_3.add(new ItemHFModelClass(R.drawable.led_tv, "₹ 14,400m/o", "LED TV"));
-            }
-            if (i % 6 == 4) {
-                categoryItemList_3.add(new ItemHFModelClass(R.drawable.electric_iron, "₹8,000", "Electric Iron"));
-            }
-            if (i % 6 == 5) {
-                categoryItemList_3.add(new ItemHFModelClass(R.drawable.home_theatre, "₹8,000", "Home Theatre"));
-            }
-        }
+        List<ItemHFModelClass> categoryItemList_3 = GetLists.getcategoryItemList_Item1();
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         OffItemAdapter ItemsInHFViewHolderAdapter = new OffItemAdapter(categoryItemList_3);
