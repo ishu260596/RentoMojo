@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.rentomojo.R;
 
 import java.util.ArrayList;
@@ -20,6 +23,7 @@ import java.util.List;
 public class FitnessFragment extends Fragment {
 
     private RecyclerView recyclerView;
+    private ImageSlider mImageSlider;
 
     public static FitnessFragment newInstance(){
         FitnessFragment fitnessFragment = new FitnessFragment();
@@ -40,7 +44,17 @@ public class FitnessFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerView=view.findViewById(R.id.recyclerView);
+        mImageSlider = view.findViewById(R.id.imageSlider5);
+        setSlidingImages();
         buildRecyclerViewData();
+    }
+
+    private void setSlidingImages() {
+        List<SlideModel> slideModelList = new ArrayList<>();
+        slideModelList.add(new SlideModel(R.drawable.treadmills, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.fitness_cover_photo, ScaleTypes.FIT));
+        slideModelList.add(new SlideModel(R.drawable.massager, ScaleTypes.FIT));
+        mImageSlider.setImageList(slideModelList, ScaleTypes.FIT);
     }
 
     private void buildRecyclerViewData() {

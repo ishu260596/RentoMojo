@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_20"
         android:backgroundTint="@color/black"
         android:hint="Enter phone number"
@@ -32,6 +33,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_15"
         android:layout_height="wrap_content">
 
         <Button

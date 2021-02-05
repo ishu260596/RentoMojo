@@ -20,10 +20,11 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/imageSlider"
+                android:id="@+id/imageSlider1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_150"
                 app:iss_auto_cycle="true"
+                android:layout_margin="@dimen/dp_5"
                 app:iss_delay="0"
                 app:iss_period="1200" />
 
@@ -118,7 +119,7 @@
 
                 <ImageView
                     style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                    android:src="@drawable/ic_washing_machine_final" />
+                    android:src="@drawable/ic_washing_machine_finalblackwhite" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -175,7 +176,7 @@
 
                 <ImageView
                     style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                    android:src="@drawable/ic_bed_final" />
+                    android:src="@drawable/ic_iconfinder_twi_blackwhite" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -203,7 +204,7 @@
 
                 <ImageView
                     style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                    android:src="@drawable/smart_value" />
+                    android:src="@drawable/ic_alexa_blackwhite" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -232,7 +233,7 @@
 
                 <ImageView
                     style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                    android:src="@drawable/fitness" />
+                    android:src="@drawable/ic_trademill_final_blackwhite" />
 
                 <TextView
                     android:layout_width="wrap_content"

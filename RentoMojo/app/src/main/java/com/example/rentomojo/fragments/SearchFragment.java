@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.offer_upto_70.OfferActivity;
 import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.ItemHFModelClass;
 import com.example.rentomojo.recyclerview.MostItemPopularAdapter;
@@ -157,7 +158,14 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         mRecyclerViewSecond = view.findViewById(R.id.recyclerViewSecondSF);
         mRecyclerViewThird = view.findViewById(R.id.recyclerViewThirdSF);
         mEtSearch = view.findViewById(R.id.etSearchSF);
+
         mCardViewPackages.setOnClickListener(this);
+        mCardViewUpto.setOnClickListener(this);
+        mCardViewFurniture.setOnClickListener(this);
+        mCardViewAppliances.setOnClickListener(this);
+        mCardViewFitness.setOnClickListener(this);
+        mCardViewElectronics.setOnClickListener(this);
+        mCardviewWFHEssentials.setOnClickListener(this);
     }
 
     @Override
@@ -170,10 +178,35 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.clPackagesSF:
-                Intent intent = new Intent(getActivity(), PackageActivity.class);
-                startActivity(intent);
+            case R.id.clUptoOffSF:
+                Intent intent1 = new Intent(getActivity(), OfferActivity.class);
+                startActivity(intent1);
                 break;
+            case R.id.clPackagesSF:
+                goToPackagesActivity(0);
+                break;
+            case R.id.clAppliancesSF:
+                goToPackagesActivity(2);
+                break;
+            case R.id.clElectronicsSF:
+                goToPackagesActivity(3);
+                break;
+            case R.id.clFurnitureSF:
+                goToPackagesActivity(1);
+                break;
+            case R.id.clFitnessSF:
+                goToPackagesActivity(4);
+                break;
+            case R.id.clWfhEssentialsSF:
+                goToPackagesActivity(3);
+                break;
+
         }
+    }
+
+    private void goToPackagesActivity(int position) {
+        Intent intent = new Intent(getActivity(), PackageActivity.class);
+        intent.putExtra("position", position);
+        startActivity(intent);
     }
 }

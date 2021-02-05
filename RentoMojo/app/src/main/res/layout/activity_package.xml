@@ -18,7 +18,7 @@
         android:paddingTop="@dimen/dp_4"
         android:paddingBottom="@dimen/dp_4"
         android:text="@string/back"
-        android:textSize="@dimen/sp_20" />
+        android:textSize="@dimen/sp_22" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -26,8 +26,8 @@
         android:layout_height="wrap_content"
         app:tabSelectedTextColor="@color/Red"
         app:tabGravity="fill"
+        app:tabIndicatorColor="@color/refer"
         android:focusableInTouchMode="true"
-        app:tabIndicatorColor="@color/Red"
         app:tabMode="scrollable"
         app:tabTextColor="@color/black" />
 

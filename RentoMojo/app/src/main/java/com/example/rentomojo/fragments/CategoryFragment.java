@@ -1,5 +1,6 @@
 package com.example.rentomojo.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.packageactivity.PackageActivity;
 import com.example.rentomojo.recyclerview.CategoryItem;
 import com.example.rentomojo.recyclerview.CategoryViewHolderAdapterFour;
 import com.example.rentomojo.recyclerview.CategoryViewHolderAdapterOne;
@@ -64,6 +66,10 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
         mTvViewFurnitureCatF = view.findViewById(R.id.tvViewFurnitureCatF);
         mTvElectronicCatF = view.findViewById(R.id.tvElectronicCatF);
         mTvViewPackagesCatF = view.findViewById(R.id.tvViewPackagesCatF);
+        mTvElectronicCatF.setOnClickListener(this);
+        mTvViewAppliancesCatF.setOnClickListener(this);
+        mTvViewFurnitureCatF.setOnClickListener(this);
+        mTvViewPackagesCatF.setOnClickListener(this);
     }
 
     private void buildRecyclerViewData_1() {
@@ -204,14 +210,24 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tvViewAppliancesCatF:
+                redirectToPackages(2);
                 break;
             case R.id.tvViewFurnitureCatF:
+                redirectToPackages(1);
                 break;
             case R.id.tvViewPackagesCatF:
+                redirectToPackages(0);
                 break;
             case R.id.tvElectronicCatF:
+                redirectToPackages(3);
                 break;
 
         }
+    }
+
+    private void redirectToPackages(int position) {
+        Intent intent = new Intent(getActivity(), PackageActivity.class);
+        intent.putExtra("position",position);
+        startActivity(intent);
     }
 }
