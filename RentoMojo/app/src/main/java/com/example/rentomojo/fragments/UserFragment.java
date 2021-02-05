@@ -83,8 +83,6 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent);
             case R.id.cv3:
 
-
-
         }
 
 
