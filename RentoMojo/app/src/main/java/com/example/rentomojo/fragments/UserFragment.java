@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.rentomojo.R;
 import com.example.rentomojo.activities.LoginAcitvity;
 import com.example.rentomojo.activities.OffersAndPromotionsActivity;
+import com.example.rentomojo.activities.ReadMoreActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import org.w3c.dom.Text;
@@ -81,8 +82,19 @@ public class UserFragment extends Fragment implements View.OnClickListener {
             case R.id.cv2:
                 intent= new Intent(getActivity(), OffersAndPromotionsActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.cv4:
+                BottomSheetDialog buttonPopup = new BottomSheetDialog(getActivity(), R.style.BottomSheetDialogTheme);
+                View view1 = LayoutInflater.from(getContext()).inflate(R.layout.contact_sheet,
+                        v.findViewById(R.id.ContactSheetDialog));
+                buttonPopup.setContentView(view1);
+                buttonPopup.setCanceledOnTouchOutside(true);
+                buttonPopup.show();
+                break;
             case R.id.cv3:
-
+                intent =new Intent(getActivity(), ReadMoreActivity.class);
+                startActivity(intent);
+                break;
         }
 
 
