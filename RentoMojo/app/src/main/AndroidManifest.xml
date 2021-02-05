@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentoMojo">
-
+        <activity android:name=".cart_activity.CartActivity"></activity>
         <activity android:name=".activities.ShoppingCartActivity" />
         <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.BeginActivity" />

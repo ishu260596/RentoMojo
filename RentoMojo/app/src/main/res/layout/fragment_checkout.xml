@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".cart_activity.CheckoutFragment">
+
+
+<ImageView
+    android:id="@+id/ivTickBlue"
+    android:layout_width="wrap_content"
+    android:src="@drawable/tickmark_blue"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="@dimen/dp_20"
+    android:layout_marginStart="@dimen/dp_20"
+    android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvCheckout"
+        app:layout_constraintStart_toEndOf="@id/ivTickBlue"
+        app:layout_constraintTop_toTopOf="@id/ivTickBlue"
+        app:layout_constraintBottom_toBottomOf="@id/ivTickBlue"
+        android:text="@string/checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/checkoutLine"
+        android:layout_width="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@id/ivTickBlack1"
+        app:layout_constraintTop_toTopOf="@id/tvCheckout"
+        app:layout_constraintBottom_toBottomOf="@id/tvCheckout"
+        app:layout_constraintStart_toEndOf="@id/tvCheckout"
+        android:background="@color/grey"
+        android:layout_height="@dimen/dp_2"/>
+
+    <ImageView
+        android:id="@+id/ivTickBlack1"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/checkoutLine"
+        app:layout_constraintTop_toTopOf="@id/checkoutLine"
+        app:layout_constraintBottom_toBottomOf="@id/checkoutLine"
+        android:src="@drawable/tickmark_black"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvVerification"
+        app:layout_constraintStart_toEndOf="@id/ivTickBlack1"
+        app:layout_constraintTop_toTopOf="@id/ivTickBlack1"
+        android:text="@string/verification"
+        app:layout_constraintBottom_toBottomOf="@id/ivTickBlack1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/verificationLine"
+        android:layout_width="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="@id/tvCheckout"
+        app:layout_constraintBottom_toBottomOf="@id/tvCheckout"
+        app:layout_constraintStart_toEndOf="@id/tvVerification"
+        android:background="@color/grey"
+        android:layout_height="@dimen/dp_2"/>
+
+    <ImageView
+        android:id="@+id/ivTickBlack2"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/verificationLine"
+        app:layout_constraintTop_toTopOf="@id/verificationLine"
+        app:layout_constraintBottom_toBottomOf="@id/verificationLine"
+        android:src="@drawable/tickmark_black"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
