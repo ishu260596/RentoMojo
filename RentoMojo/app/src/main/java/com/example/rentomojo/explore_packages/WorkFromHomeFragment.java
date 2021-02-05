@@ -1,4 +1,4 @@
-package com.example.rentomojo.packageactivity;
+package com.example.rentomojo.explore_packages;
 
 import android.os.Bundle;
 
@@ -13,11 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.rentomojo.R;
+import com.example.rentomojo.get_lists.GetLists;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FitnessAndExerciseFragment extends Fragment {
+public class WorkFromHomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
@@ -25,32 +26,21 @@ public class FitnessAndExerciseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fitness_and_exercise, container, false);
+        return inflater.inflate(R.layout.fragment_work_from_home, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerView_7);
-        buildRecyclerViewData_7();
+        recyclerView = view.findViewById(R.id.recyclerView_4);
+        buildRecyclerViewData_4();
     }
 
-    private void buildRecyclerViewData_7() {
-        List<ExplorePackageModel> explorePackageModelList_7 = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
-            if (i % 2 == 0) {
-                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.almera,"Almirah","Rs 1208/mo","5 Items"));
-            }
-            if (i % 2 == 1) {
-                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.sofa,"Sofa","Rs 700/mo","3 Items"));
-            }
-
-        }
-
+    private void buildRecyclerViewData_4() {
+        List<ExplorePackageModel> explorePackageModelList_4 = GetLists.getExplorePackageModelList4();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        FitnessAndExerciseAdapter adapterOne = new FitnessAndExerciseAdapter(explorePackageModelList_7);
+        WorkFromHomeAdapter adapterOne = new WorkFromHomeAdapter(explorePackageModelList_4);
         recyclerView.setAdapter(adapterOne);
-
     }
 }
