@@ -12,12 +12,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="@dimen/dp_10">
+            android:elevation="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/imageSlider1"
@@ -37,325 +37,303 @@
             android:padding="@dimen/dp_20"
             android:text="@string/choose_by_room_type"
             android:textSize="@dimen/sp_16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cardView" />
 
-        <LinearLayout
-            android:id="@+id/linear_layout"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/dp_5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bed_room"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginStart="@dimen/dp_20"
+            app:layout_constraintEnd_toStartOf="@id/living_room"
+            app:layout_constraintStart_toStartOf="@id/tvChooseByRoomType"
             app:layout_constraintTop_toBottomOf="@id/tvChooseByRoomType">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/bed_room"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_height="wrap_content"
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/bedroom" />
+
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
-
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/bedroom" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/bedroom" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/living_room"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                android:layout_marginStart="@dimen/dp_20">
-
-                <LinearLayout
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
+                    android:text="@string/bedroom"
+                    android:textSize="@dimen/sp_10" />
 
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/living_room" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/living_room" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/living_room"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            app:layout_constraintEnd_toStartOf="@id/appliances"
+            app:layout_constraintStart_toEndOf="@id/bed_room"
+            app:layout_constraintTop_toBottomOf="@id/tvChooseByRoomType">
 
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/appliances"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                android:layout_marginStart="@dimen/dp_20">
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/living_room" />
 
-                <LinearLayout
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
+                    android:text="@string/living_room"
+                    android:textSize="@dimen/sp_10" />
 
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/ic_washing_machine_finalblackwhite" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/appliances" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear_layout_2"
-           android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/dp_6"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/appliances"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_20"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear_layout">
+            app:layout_constraintStart_toEndOf="@id/living_room"
+            app:layout_constraintTop_toBottomOf="@id/tvChooseByRoomType">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/work_from_home"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    style="@style/linearLayoutInsideCardViewInFragments"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/ic_washing_machine_finalblackwhite" />
 
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/wfh" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/work_from_home" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/kitchen_dining"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                android:layout_marginStart="@dimen/dp_20">
-
-                <LinearLayout
-                    style="@style/linearLayoutInsideCardViewInFragments"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
-
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/ic_iconfinder_twi_blackwhite" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/kitchen_dining" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/smart_home"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_90"
-                android:layout_marginStart="@dimen/dp_20">
-
-                <LinearLayout
-                    style="@style/linearLayoutInsideCardViewInFragments"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
-
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/ic_alexa_blackwhite" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/smart_home" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear_layout_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_6"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear_layout_2">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fitness_exercise"
-                android:layout_marginStart="@dimen/dp_25"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                >
-
-                <LinearLayout
+                <TextView
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_height="@dimen/dp_100"
-                    android:orientation="vertical">
+                    android:text="@string/appliances"
+                    android:textSize="@dimen/sp_10" />
 
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/ic_trademill_final_blackwhite" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/fitness" />
 
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/work_from_home"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="@id/bed_room"
+            app:layout_constraintStart_toStartOf="@id/bed_room"
+            app:layout_constraintTop_toBottomOf="@id/bed_room">
+
+            <LinearLayout
+                style="@style/linearLayoutInsideCardViewInFragments"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20">
+
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/wfh" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/work_from_home"
+                    android:textSize="@dimen/sp_10" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/kitchen_dining"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="@id/living_room"
+            app:layout_constraintStart_toStartOf="@id/living_room"
+            app:layout_constraintTop_toBottomOf="@id/living_room">
+
+            <LinearLayout
+                style="@style/linearLayoutInsideCardViewInFragments"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20">
+
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/ic_iconfinder_twi_blackwhite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/kitchen_dining"
+                    android:textSize="@dimen/sp_10" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/smart_home"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="@id/appliances"
+            app:layout_constraintStart_toStartOf="@id/appliances"
+            app:layout_constraintTop_toBottomOf="@id/appliances">
+
+            <LinearLayout
+                style="@style/linearLayoutInsideCardViewInFragments"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20">
+
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/ic_alexa_blackwhite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/smart_home"
+                    android:textSize="@dimen/sp_10" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fitness_exercise"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="@id/work_from_home"
+            app:layout_constraintStart_toStartOf="@id/work_from_home"
+            app:layout_constraintTop_toBottomOf="@id/work_from_home">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_100"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/ic_trademill_final_blackwhite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/fitness"
+                    android:textSize="@dimen/sp_10" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/choose_by_apartment_type"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:padding="@dimen/dp_20"
             android:text="@string/chose_by_apartment_type"
             android:textSize="@dimen/sp_16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear_layout_3" />
+            app:layout_constraintTop_toBottomOf="@id/fitness_exercise" />
 
-        <LinearLayout
-            android:id="@+id/linear_layout_4"
-           android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:gravity="center"
-           android:paddingBottom="@dimen/dp_30"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/studio_apartment"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            app:layout_constraintEnd_toEndOf="@id/fitness_exercise"
+            app:layout_constraintStart_toStartOf="@id/fitness_exercise"
             app:layout_constraintTop_toBottomOf="@id/choose_by_apartment_type">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/studio_apartment"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                android:layout_marginStart="@dimen/dp_20">
+            <LinearLayout
+                style="@style/linearLayoutInsideCardViewInFragments"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20">
 
-                <LinearLayout
-                    style="@style/linearLayoutInsideCardViewInFragments"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/studio_apartment" />
 
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/studio_apartment" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/studio_apartment"
+                    android:textSize="@dimen/sp_10" />
 
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/studio_apartment" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/one_bhk"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            app:layout_constraintEnd_toStartOf="@id/two_bhk"
+            app:layout_constraintStart_toEndOf="@id/studio_apartment"
+            app:layout_constraintTop_toBottomOf="@id/choose_by_apartment_type">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/one_bhk"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                android:layout_marginStart="@dimen/dp_20">
+            <LinearLayout
+                style="@style/linearLayoutInsideCardViewInFragments"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20">
 
-                <LinearLayout
-                    style="@style/linearLayoutInsideCardViewInFragments"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/bhk" />
 
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/bhk" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one_bhk"
+                    android:textSize="@dimen/sp_10" />
 
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/one_bhk" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/two_bhk"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/one_bhk"
+            app:layout_constraintTop_toBottomOf="@id/choose_by_apartment_type">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/two_bhk"
-                android:layout_width="@dimen/dp_90"
-                android:layout_height="@dimen/dp_100"
-                android:layout_marginStart="@dimen/dp_20">
+            <LinearLayout
+                style="@style/linearLayoutInsideCardViewInFragments"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20">
 
-                <LinearLayout
-                    style="@style/linearLayoutInsideCardViewInFragments"
-                    android:layout_marginStart="@dimen/dp_20"
-                    android:layout_marginEnd="@dimen/dp_20">
+                <ImageView
+                    style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
+                    android:src="@drawable/bhk" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two_bhk"
+                    android:textSize="@dimen/sp_10" />
 
-                    <ImageView
-                        style="@style/imageViewInsideLinearLayoutInSideCardViewInFragments"
-                        android:src="@drawable/bhk" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:textSize="@dimen/sp_10"
-                        android:text="@string/two_bhk" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
