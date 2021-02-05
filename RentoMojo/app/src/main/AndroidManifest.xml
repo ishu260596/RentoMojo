@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentoMojo">
-
+        <activity android:name=".cart_activity.CartActivity"></activity>
         <activity android:name=".activities.ShoppingCartActivity" />
         <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.BeginActivity" />
@@ -22,7 +22,7 @@
         <activity android:name=".activities.ReadMoreActivity" />
         <activity android:name=".packageactivity.PackageActivity" />
         <activity android:name=".activities.LoginAcitvity" />
-        <activity android:name=".activities.WebViewActivity"/>
+        <activity android:name=".activities.WebViewActivity" />
         <activity android:name=".activities.HomeActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
