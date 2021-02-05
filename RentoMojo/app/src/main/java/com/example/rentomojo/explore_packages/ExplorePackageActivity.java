@@ -79,7 +79,7 @@ public class ExplorePackageActivity extends AppCompatActivity implements Communi
                 break;
             default:
                 SmartHomeFragment smartHomeFragment1 = new SmartHomeFragment();
-                launchFragment(smartHomeFragment1, "SmartFragmenet");
+                launchFragment(smartHomeFragment1, "SmartFragment");
         }
     }
 

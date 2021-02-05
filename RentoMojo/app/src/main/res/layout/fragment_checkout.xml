@@ -10,8 +10,8 @@
         android:id="@+id/ivTickBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
         android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
         android:src="@drawable/tickmark_blue"
         app:layout_constraintEnd_toStartOf="@id/tvCheckout"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,8 +30,8 @@
         android:id="@+id/checkoutLine"
         android:layout_width="@dimen/dp_20"
         android:layout_height="@dimen/dp_2"
-        android:background="@color/grey"
         android:layout_margin="@dimen/dp_5"
+        android:background="@color/grey"
         app:layout_constraintBottom_toBottomOf="@id/tvCheckout"
         app:layout_constraintEnd_toStartOf="@id/ivTickBlack1"
         app:layout_constraintStart_toEndOf="@id/tvCheckout"
@@ -321,51 +321,52 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:padding="@dimen/sp_12"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="@dimen/sp_12">
 
             <TextView
                 android:id="@+id/tvTotalPrice"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:text="@string/Rs"
-                android:padding="@dimen/dp_5"
-                android:layout_marginStart="@dimen/dp_20"
-                android:textSize="@dimen/sp_20"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:padding="@dimen/dp_5"
+                android:text="@string/Rs"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvTotalRefundable"
-                app:layout_constraintTop_toBottomOf="@id/tvTotalPrice"
-                app:layout_constraintStart_toStartOf="@id/tvTotalPrice"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:padding="@dimen/dp_5"
                 android:text="@string/total_refundable_deposit"
-                android:layout_height="wrap_content" />
+                app:layout_constraintStart_toStartOf="@id/tvTotalPrice"
+                app:layout_constraintTop_toBottomOf="@id/tvTotalPrice" />
 
             <Button
                 android:id="@+id/btnProceed"
-                app:layout_constraintStart_toEndOf="@id/tvTotalRefundable"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:text="@string/proceed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_50"
-                android:textColor="@color/white"
+                android:background="@color/Red"
+                android:drawablePadding="@dimen/dp_5"
                 android:paddingStart="@dimen/dp_20"
                 android:paddingEnd="@dimen/dp_20"
-                android:background="@color/Red"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:text="@string/proceed"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTotalRefundable"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
