@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +20,11 @@ import com.example.rentomojo.get_lists.GetLists;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TwoBhkFragment extends Fragment {
+public class TwoBhkFragment extends Fragment implements BuyItemClickListner{
 
     private RecyclerView recyclerView;
+    private ExplorePackageModel model;
+    private CommunicatingFragmentListner listner;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,7 +44,26 @@ public class TwoBhkFragment extends Fragment {
         List<ExplorePackageModel> explorePackageModelList_10 = GetLists.getExplorePackageModelList10();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        TwoBhkAdapter adapterOne = new TwoBhkAdapter(explorePackageModelList_10);
+        BedroomAdapter adapterOne = new BedroomAdapter(explorePackageModelList_10,this);
         recyclerView.setAdapter(adapterOne);
+    }
+
+    @Override
+    public void onItemClick(ExplorePackageModel model) {
+        if (model != null) {
+            this.model = model;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    listner.onItemClick(model);
+                }
+            },1500);
+
+        }
+    }
+
+    public void setListner(CommunicatingFragmentListner listner) {
+        Log.d("tag","here i am getting the listner");
+        this.listner = listner;
     }
 }

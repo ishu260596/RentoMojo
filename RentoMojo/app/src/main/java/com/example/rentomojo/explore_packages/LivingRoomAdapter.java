@@ -19,6 +19,7 @@ public class LivingRoomAdapter extends RecyclerView.Adapter<LivingRoomAdapter.It
 
     public LivingRoomAdapter(List<ExplorePackageModel> explorePackageModelList) {
         this.explorePackageModelList=explorePackageModelList;
+
     }
 
     @NonNull
