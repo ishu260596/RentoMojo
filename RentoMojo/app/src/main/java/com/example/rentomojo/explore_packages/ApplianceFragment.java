@@ -25,7 +25,6 @@ public class ApplianceFragment extends Fragment implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ExplorePackageModel model;
     private CommunicatingFragmentListner listner;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,7 +60,6 @@ public class ApplianceFragment extends Fragment implements BuyItemClickListner {
 
         }
     }
-
     public void setListner(CommunicatingFragmentListner listner) {
         Log.d("tag","here i am getting the listner");
         this.listner = listner;

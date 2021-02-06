@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.rentomojo.R;
 
@@ -70,17 +71,24 @@ public class CheckoutFragment extends Fragment {
         mEtEnterCode.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                mBtnApply.setBackgroundResource(R.drawable.continue_btn_bg_red);
+
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                mBtnApply.setBackgroundResource(R.drawable.continue_btn_bg_red);
             }
 
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+        mBtnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mEtEnterCode.setTextColor(getResources().getColor(R.color.white));
+                Toast.makeText(getContext(), "Coupon Applied", Toast.LENGTH_SHORT).show();
             }
         });
         mBtnProceed.setOnClickListener(new View.OnClickListener() {
