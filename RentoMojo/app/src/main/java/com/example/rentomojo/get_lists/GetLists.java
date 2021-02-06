@@ -543,7 +543,7 @@ public class GetLists {
                 explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.treadmills, "Treadmills", "Rs 1208/mo", "5 Items"));
             }
             if (i % 2 == 1) {
-                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.cross_trainer, "Cross Trainer", "Rs 700/mo", "3 Items"));
+                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.exercise_bikes, "Cross Trainer", "Rs 700/mo", "3 Items"));
             }
 
         }

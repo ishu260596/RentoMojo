@@ -18,7 +18,7 @@ import com.example.rentomojo.get_lists.GetLists;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FitnessAndExerciseFragment extends Fragment {
+public class FitnessAndExerciseFragment extends Fragment implements BuyItemClickListner {
 
     private RecyclerView recyclerView;
 
@@ -40,8 +40,13 @@ public class FitnessAndExerciseFragment extends Fragment {
         List<ExplorePackageModel> explorePackageModelList_7 = GetLists.getExplorePackageModelList7();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        FitnessAndExerciseAdapter adapterOne = new FitnessAndExerciseAdapter(explorePackageModelList_7);
+        BedroomAdapter adapterOne = new BedroomAdapter(explorePackageModelList_7, this);
         recyclerView.setAdapter(adapterOne);
+
+    }
+
+    @Override
+    public void onItemClick(ExplorePackageModel model) {
 
     }
 }

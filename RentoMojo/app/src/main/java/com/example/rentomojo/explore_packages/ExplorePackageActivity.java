@@ -43,10 +43,12 @@ public class ExplorePackageActivity extends AppCompatActivity implements Communi
                 break;
             case 2:
                 LivingRoomFragment livingRoomFragment = new LivingRoomFragment();
+
                 launchFragment(livingRoomFragment, "LivingRoomFragment");
                 break;
             case 3:
                 ApplianceFragment applianceFragment = new ApplianceFragment();
+                applianceFragment.setListner(this);
                 launchFragment(applianceFragment, "AppliancesFragment");
                 break;
             case 4:
@@ -63,6 +65,7 @@ public class ExplorePackageActivity extends AppCompatActivity implements Communi
                 break;
             case 7:
                 FitnessAndExerciseFragment fitnessAndExerciseFragment = new FitnessAndExerciseFragment();
+
                 launchFragment(fitnessAndExerciseFragment, "FitnessFragment");
                 break;
             case 8:

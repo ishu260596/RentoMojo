@@ -56,7 +56,7 @@
     <string name="referral_code">Referral Code</string>
     <string name="email_id">Email ID</string>
     <string name="enter_otp">Please enter OTP or password</string>
-    <string name="otp_sent">OTP is sent to 9875639875</string>
+    <string name="otp_sent">OTP is sent to 98573413121</string>
     <string name="add_delivery_fragment">Add delivery address</string>
     <string name="house_no">House No./Flat No.*</string>
     <string name="society">Society</string>
@@ -126,4 +126,6 @@
     <string name="cart">Cart</string>
     <string name="proceed"><![CDATA[proceed ]]></string>
     <string name="total_refundable_deposit">Total Refundable Deposit</string>
+    <string name="enter_the_otp_here">Enter the OTP here</string>
+    <string name="order_confirmed">Order Confirmed</string>
 </resources>
