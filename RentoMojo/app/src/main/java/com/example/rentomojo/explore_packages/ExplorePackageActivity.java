@@ -33,7 +33,6 @@ public class ExplorePackageActivity extends AppCompatActivity implements Communi
         }
     }
 
-
     private void setPosition(int position) {
         switch (position) {
             case 1:
@@ -43,30 +42,37 @@ public class ExplorePackageActivity extends AppCompatActivity implements Communi
                 break;
             case 2:
                 LivingRoomFragment livingRoomFragment = new LivingRoomFragment();
+                livingRoomFragment.setListner(this);
                 launchFragment(livingRoomFragment, "LivingRoomFragment");
                 break;
             case 3:
                 ApplianceFragment applianceFragment = new ApplianceFragment();
+                applianceFragment.setListner(this);
                 launchFragment(applianceFragment, "AppliancesFragment");
                 break;
             case 4:
                 WorkFromHomeFragment workFromHomeFragment = new WorkFromHomeFragment();
+                workFromHomeFragment.setListner(this);
                 launchFragment(workFromHomeFragment, "WorkFromHome");
                 break;
             case 5:
                 KitchenFragment kitchenFragment = new KitchenFragment();
+                kitchenFragment.setListner(this);
                 launchFragment(kitchenFragment, "KitchenFragment");
                 break;
             case 6:
                 SmartHomeFragment smartHomeFragment = new SmartHomeFragment();
+                smartHomeFragment.setListner(this);
                 launchFragment(smartHomeFragment, "SmartHomeFragment");
                 break;
             case 7:
                 FitnessAndExerciseFragment fitnessAndExerciseFragment = new FitnessAndExerciseFragment();
+                fitnessAndExerciseFragment.setListner(this);
                 launchFragment(fitnessAndExerciseFragment, "FitnessFragment");
                 break;
             case 8:
                 StudioApartmentFragment studioApartmentFragment = new StudioApartmentFragment();
+                studioApartmentFragment.setListner(this);
                 launchFragment(studioApartmentFragment, "StudioFragment");
                 break;
             case 9:
@@ -75,10 +81,12 @@ public class ExplorePackageActivity extends AppCompatActivity implements Communi
                 break;
             case 10:
                 TwoBhkFragment twoBhkFragment = new TwoBhkFragment();
+                twoBhkFragment.setListner(this);
                 launchFragment(twoBhkFragment, "TwoBHKFragment");
                 break;
             default:
                 SmartHomeFragment smartHomeFragment1 = new SmartHomeFragment();
+                smartHomeFragment1.setListner(this);
                 launchFragment(smartHomeFragment1, "SmartFragment");
         }
     }

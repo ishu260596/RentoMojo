@@ -296,7 +296,7 @@ public class GetLists {
                 categoryItemList_2.add(new ItemHFModelClass(R.drawable.bed, "₹20,000m/o", "Bed"));
             }
             if (i % 6 == 1) {
-                categoryItemList_2.add(new ItemHFModelClass(R.drawable.sofa, "₹25,000m/o", "Sofa"));
+                categoryItemList_2.add(new ItemHFModelClass(R.drawable.sofa_table, "₹25,000m/o", "Sofa"));
             }
             if (i % 6 == 2) {
                 categoryItemList_2.add(new ItemHFModelClass(R.drawable.poise_queen_bed, "₹14,400m/o", "Poise Queen"));
@@ -514,7 +514,7 @@ public class GetLists {
                 explorePackageModelList_5.add(new ExplorePackageModel(R.drawable.kitchen_appliances, "Kitchen Appliance", "Rs 1208/mo", "5 Items"));
             }
             if (i % 2 == 1) {
-                explorePackageModelList_5.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "3 Items"));
+                explorePackageModelList_5.add(new ExplorePackageModel(R.drawable.sofa_table, "Sofa", "Rs 700/mo", "3 Items"));
             }
 
         }
@@ -539,11 +539,14 @@ public class GetLists {
     public static List<ExplorePackageModel> getExplorePackageModelList7() {
         List<ExplorePackageModel> explorePackageModelList_7 = new ArrayList<>();
         for (int i = 0; i < 200; i++) {
-            if (i % 2 == 0) {
+            if (i % 3 == 0) {
                 explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.treadmills, "Treadmills", "Rs 1208/mo", "5 Items"));
             }
-            if (i % 2 == 1) {
-                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.cross_trainer, "Cross Trainer", "Rs 700/mo", "3 Items"));
+            if (i % 3 == 1) {
+                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.exercise_bikes, "Exercise Bike", "Rs 700/mo", "3 Items"));
+            }
+            if (i % 3 == 2) {
+                explorePackageModelList_7.add(new ExplorePackageModel(R.drawable.cross_trainer, "Cross Trainer", "Rs 500/mo", "3 Items"));
             }
 
         }
@@ -557,7 +560,7 @@ public class GetLists {
                 explorePackageModelList_8.add(new ExplorePackageModel(R.drawable.almera, "Almira", "Rs 1208/mo", "5 Items"));
             }
             if (i % 2 == 1) {
-                explorePackageModelList_8.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "3 Items"));
+                explorePackageModelList_8.add(new ExplorePackageModel(R.drawable.sofa_table, "Sofa", "Rs 700/mo", "3 Items"));
             }
 
         }
@@ -570,8 +573,9 @@ public class GetLists {
             if (i % 2 == 0) {
                 explorePackageModelList_9.add(new ExplorePackageModel(R.drawable.almera, "Almirah", "Rs 1208/mo", "5 Items"));
             }
+
             if (i % 2 == 1) {
-                explorePackageModelList_9.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "3 Items"));
+                explorePackageModelList_9.add(new ExplorePackageModel(R.drawable.sofa_table, "Sofa", "Rs 700/mo", "3 Items"));
             }
 
         }
@@ -585,7 +589,7 @@ public class GetLists {
                 explorePackageModelList_10.add(new ExplorePackageModel(R.drawable.almera, "Almirah", "Rs 1208/mo", "5 Items"));
             }
             if (i % 2 == 1) {
-                explorePackageModelList_10.add(new ExplorePackageModel(R.drawable.sofa, "Sofa", "Rs 700/mo", "3 Items"));
+                explorePackageModelList_10.add(new ExplorePackageModel(R.drawable.sofa_table, "Sofa", "Rs 700/mo", "3 Items"));
             }
 
         }
