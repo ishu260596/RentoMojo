@@ -170,6 +170,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 goToPackagesActivity(3);
                 break;
             case R.id.btnReferNow:
+
                 BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getActivity(), R.style.BottomSheetDialogTheme);
                 View view = LayoutInflater.from(getContext()).inflate(R.layout.bottom_sheet_layout,
                         v.findViewById(R.id.llBottomConatainer));
@@ -193,6 +194,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
                     }
                 });
+
+
                 btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
