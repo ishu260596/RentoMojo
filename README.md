@@ -1,20 +1,24 @@
-# RentoMojo These are the lists of library useD in app
+# RentoMojo
 
-<ul>
-  <li>  implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'</li>
-    <li>   implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'</li>
-    <li>    implementation 'androidx.legacy:legacy-support-v4:1.0.0'</li>
-    <li>implementation 'com.google.android.material:material:1.0.0-alpha1'</li>
-    <li>  implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'</li>
-    <li> implementation 'com.airbnb.android:lottie:3.6.0'</li>
-    <li>  implementation 'com.google.code.gson:gson:2.8.6'</li>
-    <li>implementation 'com.github.bumptech.glide:glide:4.11.0'</li>
-    <li>annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'</li>
-    <li>implementation 'com.google.code.gson:gson:2.8.6'</li>
+<h1 align="center">RentoMojo App</h1>
+<p align="center">  
+A furniture renting app
+</p>
+</br>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/55504024/126129757-c6dc86da-5a85-47d7-9385-282ab08c708f.jpg"/>
+</p>
+## Tech stack & Open-source libraries
 
-</ul>
-
-
-
-
+- Minimum SDK level 21
+<br>
+- Kotlin
+</br>
+<br>
+- [Lottie](https://github.com/airbnb/lottie-android) - for animations.
+</br>
+</br>
+</br>
+</br>
+## ScreenShots
 ![rento](https://user-images.githubusercontent.com/55504024/118105473-0ca0e900-b3fa-11eb-9401-996619fca5bf.gif)
